@@ -1,7 +1,6 @@
-let contador = 0
+const entrada = require('readline-sync');
+const num = entrada.questionInt("Tabuada de qual numero ? ")
 
-while (contador <= 100) {
-    console.log(`Contagem: ${contador}`)
-    contador += 5
+for (let i = 1;i <= 10; i++){
+    console.log(`${num} x ${i} = ${num * i}`)
 }
-console.log("Fim da contagem!")

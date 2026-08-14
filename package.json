@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "name": "2termo",
+  "version": "1.0.0",
+  "description": "Este repositório centraliza todos os materiais didáticos, exercícios, projetos práticos, códigos-fonte e documentação desenvolvidos durante o segundo termo do curso.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rennancampos2001-debug/2TERMO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rennancampos2001-debug/2TERMO/issues"
+  },
+  "homepage": "https://github.com/rennancampos2001-debug/2TERMO#readme"
 }

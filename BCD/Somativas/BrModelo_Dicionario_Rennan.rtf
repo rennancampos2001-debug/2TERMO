@@ -1,0 +1,520 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 Ano_Lancamento\cf1\b 
+\par \cf0\b0 Atributo que armazena o ano de lan\f1\'e7amento do modelo
+\par 
+\par date not null
+\par \f0 
+\par \cf1\b 002 - Atributo: \cf2\b0 Area_Necessaria\cf1\b 
+\par \cf0\b0 Atributo que indica a area que sera utilizada no servico
+\par 
+\par varchar(30) not null
+\par 
+\par \cf1\b 003 - Atributo: \cf2\b0 Area_Requisitada\cf1\b 
+\par \cf0\b0 Atributo que indica qual a area necessario para a ordem de servico
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 004 - Rela\f1\'e7\'e3o: \cf2\b0 Atende\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e clientes
+\par possui rela\f1\'e7\'e3o de 0,n e 0,n
+\par funcionario chave primaria - PK
+\par id_Funcionarios
+\par cliente chave primaria - PK
+\par id_clientes
+\par \f0 
+\par \cf1\b 005 - Rela\f1\'e7\'e3o: \cf2\b0 Busca\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Marcas e Modelos
+\par possui rela\f1\'e7\'e3o de 1,n e 1,n
+\par Marcas chave primaria - PK
+\par id_Marca
+\par Modelos chave primaria - PK
+\par id_Modelo
+\par \f0 
+\par \cf1\b 006 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 Atributo que permite informar o CNPJ
+\par 
+\par varchar(30) not null
+\par 
+\par \cf1\b 007 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 Atributo que tem o CNPJ da fornecedora 
+\par 
+\par varchar (30) not null
+\par 
+\par \cf1\b 008 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Atribui o CPF inserido ao funcionario 
+\par 
+\par varchar(15) not null
+\par 
+\par \cf1\b 009 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Atributo que Armazena o Cpf do cliente
+\par 
+\par varchar (15) not null
+\par 
+\par \cf1\b 010 - Atributo: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 Atribui o cargo que o funcionario exerce
+\par 
+\par varchar(30) not null
+\par 
+\par \cf1\b 011 - Atributo: \cf2\b0 Carro\cf1\b 
+\par \cf0\b0 Atributo que indica que o veiculo \f1\'e9 um carro
+\par 
+\par enum ('Carro', 'Moto') default 'Carro' not null
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Classificacao\cf1\b 
+\par \cf0\b0 Atributo que busca qual o tipo de classifica\f1\'e7\'e3o do veiculo
+\par 
+\par enum ('Combustao', 'Eletrico') default 'combustao' not null
+\par \f0 
+\par \cf1\b 013 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Clientes
+\par Relacionamentos entre funcionario e cliente: Atende
+\par cardialidade de relacionamento 0,n e 0,n
+\par 
+\par Relacionamentos entre Clientes e Servicos: Solicita
+\par cardialidade de relacionamento 1,n e 0,n \f0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Combustao\cf1\b 
+\par \cf0\b0 Atributo que indica que o veiculo \f1\'e9 a combustao
+\par 
+\par enum ('Combustao', 'Eletrico') default 'combustao' not null
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 Comprovante\cf1\b 
+\par \cf0\b0 Atributo que contem o comprovante do pagamento
+\par 
+\par int
+\par 
+\par \cf1\b 016 - Atributo: \cf2\b0 Credito\cf1\b 
+\par \cf0\b0 Atributo que indica que a forma de pagamento \f1\'e9 Credito
+\par \f0 
+\par \cf1\b 017 - Rela\f1\'e7\'e3o: \cf2\b0 Cria\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Servicos e Ordem_de_Servico
+\par possui rela\f1\'e7\'e3o de 1,n e 1,1
+\par Servicos chave primaria - PK
+\par id_Servicos
+\par Ordem_de_Servico chave primaria - PK
+\par id_Ordem_Servico
+\par \f0 
+\par \cf1\b 018 - Atributo: \cf2\b0 Custo\cf1\b 
+\par \cf0\b0 Atributo que tem o valor de custo da pe\f1\'e7a 
+\par 
+\par decimal(5,2) not null default 000.00
+\par \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 Data_Adquirido\cf1\b 
+\par \cf0\b0 Atributo que tem a data que a pe\f1\'e7a foi adquirida
+\par 
+\par date not null
+\par \f0 
+\par \cf1\b 020 - Atributo: \cf2\b0 Data_Cadastro\cf1\b 
+\par \cf0\b0 Atributo responsavel por informar a data de cadastro do cliente
+\par 
+\par datetime not null
+\par 
+\par \cf1\b 021 - Atributo: \cf2\b0 Data_Cadastro\cf1\b 
+\par \cf0\b0 Atributo que contem a data de cadastro da marca 
+\par 
+\par  date not null
+\par 
+\par \cf1\b 022 - Atributo: \cf2\b0 Data_Chegada\cf1\b 
+\par \cf0\b0 Atributo que informa qual a data que o veiculo chegou na oficina
+\par 
+\par datetime not null
+\par 
+\par \cf1\b 023 - Atributo: \cf2\b0 Data_Saida\cf1\b 
+\par \cf0\b0 Atributo que permite informar qual foi a data de saida do veiculo da oficina
+\par 
+\par datetime not null
+\par 
+\par \cf1\b 024 - Atributo: \cf2\b0 Data_Vencimento\cf1\b 
+\par \cf0\b0 Atributo que indica qual \f1\'e9 a data de vencimento do pagamento
+\par 
+\par date not null
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 Debito\cf1\b 
+\par \cf0\b0 Atributo que indica que a forma de pagamento \f1\'e9 Debito
+\par 
+\par enum ('Debito','Credito','PIX') default 'debito'
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 Diagonstico\cf1\b 
+\par \cf0\b0 Atributo que indica qual \f1\'e9 o problema a ser resolvido
+\par 
+\par text not null
+\par \f0 
+\par \cf1\b 027 - Atributo: \cf2\b0 Diurno\cf1\b 
+\par \cf0\b0 Atribuido a funcionarios com turno diurno
+\par 
+\par enum ('Diurno', 'Noturno') default 'Diurno' not null
+\par 
+\par \cf1\b 028 - Atributo: \cf2\b0 Eletrico\cf1\b 
+\par \cf0\b0 Atributo que indica que o veiculo \f1\'e9  eletrico
+\par 
+\par enum ('Combustao', 'Eletrico') default 'combustao' not null
+\par \f0 
+\par \cf1\b 029 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Atributo que armazena o email do cliente 
+\par 
+\par varchar (250) not null
+\par 
+\par \cf1\b 030 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Atributo que contem o endere\f1\'e7o do fornecedor
+\par 
+\par varchar (60) not null
+\par \f0 
+\par \cf1\b 031 - Atributo: \cf2\b0 Forma_Pagamento\cf1\b 
+\par \cf0\b0 Atributo que Indica qual \f1\'e9 a forma de pagamento 
+\par 
+\par enum ('Debito','Credito','PIX') default 'debito'
+\par \f0 
+\par \cf1\b 032 - Rela\f1\'e7\'e3o: \cf2\b0 Fornece\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e Servicos
+\par possui rela\f1\'e7\'e3o de 0,n e 1,n
+\par funcionario chave primaria - PK
+\par id_Funcionarios
+\par Servicos chave primaria - PK
+\par id_Servicos
+\par \f0 
+\par \cf1\b 033 - Entidade: \cf2\b0 Fornecedores\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 034 - Rela\f1\'e7\'e3o: \cf2\b0 Fornecidas\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Pecas e Fornecedores
+\par possui rela\f1\'e7\'e3o de 0,n e 0,n
+\par Pecas chave primaria - PK
+\par id_Peca
+\par Fornecedores chave primaria - PK
+\par id_Fornecedor
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 Funcionario_Responsavel\cf1\b 
+\par \cf0\b0 Atributo que indica o funcionario responsavel pelo pela ordem de servico
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 036 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos funcionarios
+\par Relacionamentos entre funcionario e cliente: Atende
+\par cardialidade de relacionamento 0,n e 0,n
+\par 
+\par Relacionamentos entre funcionario e Servicos: Fornece
+\par cardialidade de relacionamento 0,n e 1,n
+\par  \f0 
+\par \cf1\b 037 - Rela\f1\'e7\'e3o: \cf2\b0 Gera\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Pagamentos e Ordem_de_Servico
+\par possui rela\f1\'e7\'e3o de 1,n e 1,n
+\par Pagamentos chave primaria - PK
+\par id_Pagamento
+\par Ordem_de_Servico chave primaria - PK
+\par id_Ordem_Servico
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 Id_Cliente\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada cliente 
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 039 - Atributo: \cf2\b0 Id_Fornecedor\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada um dos fornecedores
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 040 - Atributo: \cf2\b0 Id_Funcionario\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada um dos usuarios
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 041 - Atributo: \cf2\b0 Id_Marca\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada uma das marcas 
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 042 - Atributo: \cf2\b0 Id_Modelos\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada um dos modelos
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 043 - Atributo: \cf2\b0 Id_Ordem_Servico\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada uma das ordens de servico
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 044 - Atributo: \cf2\b0 Id_Pagamento\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada um dos pagamentos
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 045 - Atributo: \cf2\b0 Id_Peca\cf1\b 
+\par \cf0\b0 Atribui ID unico para cada uma das pecas
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 046 - Atributo: \cf2\b0 Id_Servicos\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada Servico
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 047 - Atributo: \cf2\b0 Id_Veiculo\cf1\b 
+\par \cf0\b0 Atribui ID unico a cada um dos veiculos
+\par 
+\par int auto_increment primary key
+\par 
+\par \cf1\b 048 - Atributo: \cf2\b0 Manutencao\cf1\b 
+\par \cf0\b0 Atributo que seleciona o tipo como manutencao
+\par 
+\par enum ('Manutencao', 'Pintura') default 'Manutencao' not null
+\par 
+\par \cf1\b 049 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 050 - Entidade: \cf2\b0 Modelos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Modelos
+\par Relacionamentos entre Marcas e Modelos: Busca
+\par cardialidade de relacionamento 1,1 e 1,n
+\par 
+\par Relacionamentos entre Modelos e Pecas: Seleciona
+\par cardialidade de relacionamento 1,n e 1,n
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 Moto\cf1\b 
+\par \cf0\b0 Atributo que indica que o veiculo escolhido \f1\'e9 uma moto
+\par 
+\par enum ('Carro', 'Moto') default 'Carro' not null
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nao\cf1\b 
+\par \cf0\b0 Atributo que informa que a marca nao tem parceria 
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par 
+\par \cf1\b 053 - Atributo: \cf2\b0 Nao\cf1\b 
+\par \cf0\b0 Atributo que indica que nao tera prioridade na ordem de servico
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par 
+\par \cf1\b 054 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo que atribui o nome ao funcionario 
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 055 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo que armazena o nome de cada servico
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 056 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo responsavel por informar o nome da marca
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 057 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo que descreve o nome do modelo
+\par 
+\par varchar(40) not null
+\par 
+\par \cf1\b 058 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo que recebe o nome das pe\f1\'e7as
+\par 
+\par varchar (50) not null
+\par \f0 
+\par \cf1\b 059 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo que atribui nome para cada cliente
+\par 
+\par varchar(50) not null
+\par 
+\par \cf1\b 060 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo qeu indica o nome do fornecedor
+\par 
+\par varchar (50) not null 
+\par \cf1\b 061 - Atributo: \cf2\b0 Noturno\cf1\b 
+\par \cf0\b0 Atribuido a funcionarios que trabalham noturno 
+\par 
+\par enum ('Diurno', 'Noturno') default 'Diurno' not null
+\par 
+\par \cf1\b 062 - Atributo: \cf2\b0 Observacao\cf1\b 
+\par \cf0\b0 Atributo que permite fazer qualque tipo de observacao sobre o servi\f1\'e7o
+\par \f0 
+\par \cf1\b 063 - Atributo: \cf2\b0 Observacoes\cf1\b 
+\par \cf0\b0 Atributo que permite armazenar todas observa\f1\'e7\'f5es
+\par 
+\par text
+\par \f0 
+\par \cf1\b 064 - Atributo: \cf2\b0 Observacoes\cf1\b 
+\par \cf0\b0 Atributo permite fazer observacoes gerais sobre o veiculo
+\par 
+\par text
+\par 
+\par \cf1\b 065 - Observa\f1\'e7\'e3o: \cf2\b0 Oficina Somativa Rennan\cf1\b  \cf0\b0\f0 
+\par \cf1\b 066 - Entidade: \cf2\b0 Ordem_de_Servico\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Ordem_de_Servico
+\par Relacionamentos entre Servicos e Ordem_de_Servico: Cria
+\par cardialidade de relacionamento 1,n e 1,1
+\par 
+\par Relacionamentos entre Ordem_de_Servico e Pagamentos: Gera
+\par cardialidade de relacionamento 1,n e 1,n
+\par 
+\par Relacionamentos entre Ordem_de_Servico e Veiculos: Recebe
+\par cardialidade de relacionamento 1,n e 1,n \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 PIX\cf1\b 
+\par \cf0\b0 Atributo que indica Que a forma de pagamento \f1\'e9 o PIX
+\par 
+\par enum ('Debito','Credito','PIX') default 'debito'
+\par \f0 
+\par \cf1\b 068 - Entidade: \cf2\b0 Pagamentos\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 069 - Atributo: \cf2\b0 Parceria\cf1\b 
+\par \cf0\b0 Atributi que ira saber se a marca \f1\'e9 parceira ou nao
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par \f0 
+\par \cf1\b 070 - Entidade: \cf2\b0 Pecas\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Pecas
+\par Relacionamentos entre Modelos e Pecas: Seleciona
+\par cardialidade de relacionamento 1,n e 1,n
+\par 
+\par Relacionamentos entre Pecas e Fornecedores: Fornecidas
+\par cardialidade de relacionamento 0,n e 0,n
+\par \f0 
+\par \cf1\b 071 - Atributo: \cf2\b0 Peso\cf1\b 
+\par \cf0\b0 Atributo que tem o peso da pe\f1\'e7a
+\par 
+\par varchar (20) not null
+\par \f0 
+\par \cf1\b 072 - Atributo: \cf2\b0 Pe\f1\'e7a_Fornecida\cf1\b 
+\par \cf0\b0\f0 Atributo que busca qual a pe\f1\'e7a que foi fornecida
+\par 
+\par varchar(50) not null
+\par \f0 
+\par \cf1\b 073 - Atributo: \cf2\b0 Pintura\cf1\b 
+\par \cf0\b0 Atributo que seleciona o tipo como Pintura
+\par 
+\par enum ('Manutencao', 'Pintura') default 'Manutencao' not null
+\par 
+\par \cf1\b 074 - Atributo: \cf2\b0 Prioridade\cf1\b 
+\par \cf0\b0 Atributo que indica se a ordem de servico indicada tera ou nao prioridade
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par 
+\par \cf1\b 075 - Atributo: \cf2\b0 Problemas_Conhecidos\cf1\b 
+\par \cf0\b0 Atributo que guarda todos os problemas cronicos do modelo
+\par 
+\par text
+\par 
+\par \cf1\b 076 - Rela\f1\'e7\'e3o: \cf2\b0 Recebe\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Veiculos e Ordem_de_Servico
+\par possui rela\f1\'e7\'e3o de 1,n e 1,n
+\par Veiculos chave primaria - PK
+\par id_Veiculo
+\par Ordem_de_Servico chave primaria - PK
+\par id_Ordem_Servico
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 Salario\cf1\b 
+\par \cf0\b0 Atributo responsavel por armazenar o salario do funcionario
+\par 
+\par decimal (5,2) not null
+\par 
+\par \cf1\b 078 - Rela\f1\'e7\'e3o: \cf2\b0 Seleciona\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Modelos e Pecas
+\par Modelos chave primaria - PK
+\par id_Modelo
+\par Pecas chave primaria - PK
+\par id_Peca
+\par 
+\par \cf1\b 079 - Entidade: \cf2\b0 Servicos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Servicos
+\par Relacionamentos entre funcionario e Servicos: Fornece
+\par cardialidade de relacionamento 0,n e 1,n
+\par 
+\par Relacionamentos entre Servicos e Clientes
+\par cardialidade de relacionamento 0,n e 1,n
+\par 
+\par Relacionamentos entre Servicos e Ordem_de_Servico
+\par cardialidade de relacionamento 1,n e 1,1
+\par \f0 
+\par \cf1\b 080 - Atributo: \cf2\b0 Sim\cf1\b 
+\par \cf0\b0 Atributo que informa que a marca tem parceria
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par 
+\par \cf1\b 081 - Atributo: \cf2\b0 Sim\cf1\b 
+\par \cf0\b0 Atributo que indica que a ordem de servico tera prioridade 
+\par 
+\par enum ('Sim', 'Nao') default 'Nao' not null
+\par 
+\par \cf1\b 082 - Rela\f1\'e7\'e3o: \cf2\b0 Solicita\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Servicos e clientes
+\par possui rela\f1\'e7\'e3o de 0,n e 1,n
+\par Servicos chave primaria - PK
+\par id_Servicos
+\par cliente chave primaria - PK
+\par id_clientes
+\par \f0 
+\par \cf1\b 083 - Atributo: \cf2\b0 Status_Pagamento\cf1\b 
+\par \cf0\b0 Atributo que indica qual \f1\'e9 o status de pagamento atual
+\par 
+\par varchar(30) not null
+\par \f0 
+\par \cf1\b 084 - Atributo: \cf2\b0 Tamanho\cf1\b 
+\par \cf0\b0 Atributo que contem o tamanho da pe\f1\'e7a
+\par 
+\par varchar (20) not null
+\par \f0 
+\par \cf1\b 085 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Atributo Responsavel por armazenar o telefone do cliente 
+\par 
+\par varchar(17) not null
+\par 
+\par \cf1\b 086 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Atributo que indica o telefone do fornecedor 
+\par 
+\par varchar(17) not null
+\par 
+\par \cf1\b 087 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Atributo que obtem qual o telefone da marca
+\par varchar(17) not null
+\par 
+\par \cf1\b 088 - Atributo: \cf2\b0 Tempo_Necessario\cf1\b 
+\par \cf0\b0 Atributo que indica o tempo total necessari para a conclusao da ordem de servico
+\par 
+\par datetime not null
+\par 
+\par \cf1\b 089 - Atributo: \cf2\b0 Tempo_Uso\cf1\b 
+\par \cf0\b0 Atributo que informa o tempo total de uso do veiculo
+\par 
+\par varchar(35) not null
+\par 
+\par \cf1\b 090 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Atributo que permite a escolha do tipo de veiculo qua sera feito o servi\f1\'e7o
+\par 
+\par enum ('Carro', 'Moto') default 'Carro' not null
+\par \f0 
+\par \cf1\b 091 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Atributo que permite escolher qual o tipo de servico 
+\par 
+\par enum ('Manutencao', 'Pintura') default 'Manutencao' not null
+\par 
+\par \cf1\b 092 - Atributo: \cf2\b0 Turno\cf1\b 
+\par \cf0\b0 Atribui ao funcionario o Turno que ele exerce
+\par 
+\par enum ('Diurno', 'Noturno') default 'Diurno' not null
+\par 
+\par \cf1\b 093 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Atributo que armazena o valor da ordem de servico
+\par 
+\par decimal(5,2) not null default 000.00
+\par 
+\par \cf1\b 094 - Atributo: \cf2\b0 Valor_Total\cf1\b 
+\par \cf0\b0 Atributo que Informa o valor total do servico
+\par 
+\par decimal(5,2) not null default 000.00
+\par 
+\par \cf1\b 095 - Entidade: \cf2\b0 Veiculos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Veiculos
+\par Relacionamentos entre Ordem_de_Servico e Veiculo: Recebe
+\par cardialidade de relacionamento 1,n e 1,n
+\par 
+\par Relacionamentos entre Veiculos e Marcas: Verifica
+\par cardialidade de relacionamento 1,n e 1,n
+\par \f0 
+\par \cf1\b 096 - Rela\f1\'e7\'e3o: \cf2\b0 Verifica\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Veiculos e Marcas
+\par possui rela\f1\'e7\'e3o de 1,n e 1,n
+\par Veiculos chave primaria - PK
+\par id_Veiculo
+\par Marcas chave primaria - PK
+\par id_Marca
+\par \f0 
+\par 
+\par }
+ 

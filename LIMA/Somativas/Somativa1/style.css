@@ -1,0 +1,153 @@
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+}
+
+.equipe{
+    width: 400px;
+}
+
+.Ana{
+    width: 200px;
+    height: 300px;
+}
+
+.Mariana{
+    width: 300px;
+    height: 300px;
+}
+
+.Carlos{
+    width: 200px;
+    height: 300px;
+}
+
+.horizontal{
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    color: darkblue;
+    text-align: center;
+    
+}
+
+h3{
+    font-size: 20px;
+    color: darkblue;
+}
+
+section{
+    border: 30px solid whitesmoke;
+    padding: 20px;
+    background-color: white;
+}
+
+.web{
+    background-color: aliceblue;
+    padding: 5px;
+    border: 10px solid white;
+}
+
+.sistemas{
+    background-color: aliceblue;
+    padding: 5px;
+    border: 10px solid white;
+}
+
+.dados{
+    background-color: aliceblue;
+    padding: 5px;
+    border: 10px solid white;
+}
+
+.consultoria{
+    background-color: aliceblue;
+    padding: 5px;
+    border: 10px solid white;
+}
+.ana{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+    text-align: center;
+}
+
+.carlos{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+    text-align: center;
+}
+
+.mariana{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+    text-align: center;
+}
+
+.vendas{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+}
+
+.Vendas{
+    width: 500px;
+    height: 300px;
+}
+
+.aplicativo{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+}
+
+.app{
+    width: 450px;
+    height: 300px;
+}
+
+.Site{
+    width: 200px;
+    height: 300px;
+}
+
+.site{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 10px solid white;
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    height: 40px;
+    width: 150px;
+}
+
+footer{
+    background-color: darkblue;
+    color: white;
+    font-size: 10px;
+    padding: 20px;
+    text-align: center
+    ;
+}

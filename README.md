@@ -1,156 +1,116 @@
-# Portal de Conteúdo: Curso de Tecnologia e Engenharia de Software - 2º Termo
+# 2º TERMO — Curso de Tecnologia e Engenharia de Software
 
-Este repositório centraliza todos os materiais didáticos, exercícios, projetos práticos, códigos-fonte e documentação desenvolvidos durante o segundo termo do curso.
+Repositório destinado ao armazenamento das atividades, exercícios, projetos e materiais desenvolvidos durante o **2º Termo do curso de Tecnologia e Engenharia de Software**.
 
----
-
-# Organização Geral do Repositório
-
-- `/banco-de-dados` - Modelagem de dados, scripts SQL, diagramas e exercícios.
-- `/linguagem-de-marcacao` - Projetos HTML5, CSS3 e desenvolvimento de páginas web.
-- `/programacao` - Exercícios e projetos desenvolvidos durante as aulas.
-- `/engenharia-software` - Documentações, modelagens e projetos da disciplina.
+Aqui estão organizados os conteúdos de cada disciplina, facilitando o acesso às atividades e servindo também como histórico dos projetos desenvolvidos ao longo do semestre.
 
 ---
 
-# 1. Banco de Dados
+## Organização do Repositório
 
-**Ementa:** Modelagem, implementação e manipulação de bancos de dados relacionais utilizando SQL.
+### BCD — Banco de Dados
 
-- **Fundamentos**
-  - Conceitos de banco de dados.
-  - Sistemas Gerenciadores de Banco de Dados (SGBD).
-  - Modelagem Conceitual, Lógica e Física.
-  - Entidades, atributos e relacionamentos.
+Materiais e atividades relacionados à disciplina de **Banco de Dados**.
 
-- **Modelagem**
-  - Modelo Entidade-Relacionamento (MER).
-  - Diagramas DER.
-  - Cardinalidade.
-  - Normalização (1FN, 2FN e 3FN).
+Conteúdos:
 
-- **SQL**
-  - Criação de bancos de dados.
-  - Comandos DDL (`CREATE`, `ALTER`, `DROP`).
-  - Comandos DML (`INSERT`, `UPDATE`, `DELETE`).
-  - Consultas utilizando `SELECT`.
-  - Ordenação, filtros e operadores.
-  - Funções de agregação.
-  - Relacionamentos utilizando `JOIN`.
-  - Criação de chaves primárias e estrangeiras.
+* Modelagem de Banco de Dados
+* Modelo Entidade-Relacionamento (MER)
+* Diagramas ER
+* Tabelas e relacionamentos
+* Chaves primárias e estrangeiras
+* Comandos SQL
+* Consultas e filtros
+* `SELECT`, `INSERT`, `UPDATE` e `DELETE`
+* Relacionamentos entre tabelas
+* Exercícios práticos
 
-- **Ferramentas**
-  - MySQL.
-  - MySQL Workbench.
-  - phpMyAdmin (quando aplicável).
+Pasta: [`/BCD`](./BCD)
 
 ---
 
-# 2. Linguagem de Marcação
+### LIMA — Linguagem de Marcação
 
-**Ementa:** Desenvolvimento de páginas web utilizando HTML5 e CSS3, aplicando conceitos modernos de estruturação e estilização.
+Materiais e projetos desenvolvidos na disciplina de **Linguagem de Marcação**.
 
-- **HTML5**
-  - Estrutura básica de documentos.
-  - Tags semânticas.
-  - Links e navegação.
-  - Listas.
-  - Tabelas.
-  - Formulários.
-  - Áudio e vídeo.
-  - Imagens.
+Conteúdos:
 
-- **CSS3**
-  - Seletores.
-  - Classes e IDs.
-  - Box Model.
-  - Display.
-  - Position.
-  - Flexbox.
-  - Grid Layout.
-  - Responsividade.
-  - Media Queries.
+* HTML
+* Estrutura de páginas Web
+* Tags e elementos HTML
+* Links e imagens
+* Listas e tabelas
+* Formulários
+* CSS
+* Seletores
+* Classes e IDs
+* Estilização de páginas
+* Layout e responsividade
+* Desenvolvimento de páginas Web
 
-- **Boas práticas**
-  - Organização de arquivos.
-  - Acessibilidade.
-  - Estrutura semântica.
-  - Padronização de código.
-
-- **Projetos**
-  - Landing Pages.
-  - Sites institucionais.
-  - Sistemas Web estáticos.
+Pasta: [`/LIMA`](./LIMA)
 
 ---
 
-# 3. Programação
+### PBE1 — Programação
 
-**Ementa:** Desenvolvimento de aplicações utilizando lógica de programação e integração com banco de dados.
+Materiais, exercícios e projetos desenvolvidos na disciplina de **Programação**.
 
-- Estruturas condicionais.
-- Estruturas de repetição.
-- Funções.
-- Modularização.
-- Manipulação de arquivos.
-- Integração com banco de dados.
-- Desenvolvimento de projetos práticos.
+Conteúdos:
 
----
+* Lógica de programação
+* Variáveis
+* Operadores
+* Estruturas condicionais
+* Estruturas de repetição
+* Funções
+* Vetores e estruturas de dados
+* Organização do código
+* Resolução de problemas
+* Desenvolvimento de projetos práticos
 
-# 4. Engenharia de Software
-
-**Ementa:** Aplicação de técnicas de desenvolvimento de software voltadas para modelagem, documentação e gerenciamento de projetos.
-
-- UML.
-- Casos de Uso.
-- Diagramas de Classe.
-- Diagramas de Sequência.
-- Documentação técnica.
-- Versionamento com Git e GitHub.
-- Organização de projetos.
+Pasta: [`/PBE1`](./PBE1)
 
 ---
 
-# Projetos Desenvolvidos
+## Disciplinas
 
-Durante o semestre serão desenvolvidos projetos envolvendo:
-
-- Sistema de Controle de Estoque.
-- Sistema de Delivery.
-- Sistema de Academia.
-- Sistema de Fidelidade.
-- Banco de Dados Relacional.
-- Desenvolvimento Front-end utilizando HTML e CSS.
+| Disciplina            | Pasta  | Conteúdo                 |
+| --------------------- | ------ | ------------------------ |
+| Banco de Dados        | `BCD`  | Banco de dados e SQL     |
+| Linguagem de Marcação | `LIMA` | HTML e CSS               |
+| Programação           | `PBE1` | Lógica e desenvolvimento |
 
 ---
 
-# Ferramentas Utilizadas
+## Tecnologias e Ferramentas
 
-Antes do início das aulas, certifique-se de instalar as seguintes ferramentas:
+As tecnologias utilizadas podem variar de acordo com a disciplina e atividade, incluindo:
 
-1. **Git**
-2. **GitHub Desktop (Opcional)**
-3. **Visual Studio Code**
-4. **MySQL Server**
-5. **MySQL Workbench**
-6. **XAMPP (quando necessário)**
-7. **Google Chrome ou Microsoft Edge**
-
----
-
-# Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- SQL
-- MySQL
-- Git
-- GitHub
-- Visual Studio Code
+* HTML5
+* CSS3
+* SQL
+* Banco de Dados
+* Git
+* GitHub
+* Visual Studio Code
 
 ---
 
-# Objetivo do Repositório
+## Objetivo
 
-Este repositório tem como finalidade armazenar todas as atividades, exercícios, projetos e materiais desenvolvidos durante o **2º Termo** do curso, servindo como portfólio acadêmico e fonte de consulta para futuras disciplinas.
+Este repositório tem como objetivo organizar e documentar minha evolução acadêmica durante o **2º Termo**, reunindo atividades, exercícios e projetos desenvolvidos nas diferentes disciplinas.
+
+Além de servir como material de consulta, o repositório também funciona como um portfólio dos projetos realizados durante o curso.
+
+---
+
+## Autor
+
+**Rennan Campos**
+
+Repositório: [2TERMO](https://github.com/rennancampos2001-debug/2TERMO)
+
+---
+
+Repositório acadêmico — 2º Termo de Tecnologia e Engenharia de Software.

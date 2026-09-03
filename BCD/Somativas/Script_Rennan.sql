@@ -8,7 +8,7 @@ Nome varchar(50) not null,
 CPF varchar(15) not null,
 cargo varchar(30) not null,
 Turno enum ('Diurno', 'Noturno') default 'Diurno' not null,
-salario decimal (5,2) not null
+salario decimal (10,2) not null
 );
 
 alter table Funcionarios add Adicionar_Funcionarios text;
@@ -16,7 +16,7 @@ alter table Funcionarios add Adicionar_Funcionarios text;
 alter table Funcionarios drop column Adicionar_Funcionarios;
 
 create table Clientes(
-Id_Clienteint int auto_increment primary key,
+Id_Cliente int auto_increment primary key,
 nome varchar(50) not null,
 CPF varchar (15) not null,
 telefone varchar(17) not null,
@@ -40,18 +40,18 @@ alter table Servicos add Adicionar_Servicos text;
 create table Ordem_de_Servico(
 Id_Ordem_Servico int auto_increment primary key,
 prioridade enum ('Sim', 'Nao') default 'Nao' not null,
-valor decimal(5,2) not null default 000.00,
+valor decimal(10,2) not null default 000.00,
 Funcionario_Responsavel varchar(50) not null,
 Area_Requisitada varchar(50) not null,
-Tempo_Necessario datetime not null
+Tempo_Necessario TIME not null
 );
 
 alter table Ordem_de_Servico add Adicionar_Ordem_de_Servico text;
 
 create table Pagamentos(
 Id_Pagamento int auto_increment primary key,
-valor_Total decimal(5,2) not null default 000.00,
-forma_Pagamento enum ('Debito','Credito','PIX') default 'debito',
+valor_Total decimal(10,2) not null default 000.00,
+forma_Pagamento enum ('Debito','Credito','PIX') default 'Debito',
 data_Vencimento date not null,
 status_Pagamento varchar(30) not null,
 comprovante int
@@ -64,7 +64,7 @@ Id_Veiculo int auto_increment primary key,
 tipo enum ('Carro', 'Moto') default 'Carro' not null,
 Tempo_Uso varchar(35) not null,
 Data_Chegada datetime not null,
-Data_Saida datetime not null,
+Data_Saida datetime null,
 observacoes text
 );
 
@@ -84,9 +84,9 @@ alter table Marcas add Adicionar_Marcas text;
 create table Modelos(
 Id_Modelo int auto_increment primary key,
 Nome varchar(40) not null,
-Ano_Lancamento date not null,
+Ano_Lancamento YEAR not null,
 Problemas_Conhecidos text,
-Classificacao enum ('Combustao', 'Eletrico') default 'combustao' not null,
+Classificacao enum ('Combustao', 'Eletrico') default 'Combustao' not null,
 Observacoes text
 );
 
@@ -100,7 +100,7 @@ Nome varchar (50) not null,
 Tamanho varchar (20) not null,
 Peso varchar (20) not null,
 Data_Adquirido date not null,
-Custo decimal(5,2) not null default 000.00
+Custo decimal(10,2) not null default 000.00
 );
 
 alter table Pecas add Adicionar_Pecas text;
@@ -115,4 +115,3 @@ CNPJ varchar (30) not null
 );
 
 alter table Fornecedores add Adicionar_Fornecedores text;
-

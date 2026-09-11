@@ -10,4 +10,4 @@ const maoObra = manutencao.calcularMaoDeObra(horas)
 const total = manutencao.calcularTotal(valor, maoObra)
 const garantia = manutencao.verificarGarantia(ultimaManut)
 
-console.log = (` Maquina: ${nome} | Mao de obra: R$ ${maoObra} | Pecas: R$ ${valor} | Total: R$ ${total}) | Garantia: ${garantia}`)
+console.log(` Maquina: ${nome} | Mao de obra: R$ ${maoObra} | Pecas: R$ ${valor} | Total: R$ ${total}) | Garantia: ${garantia}`)

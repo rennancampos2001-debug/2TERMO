@@ -3,7 +3,7 @@ function calcularMaoDeObra (horas) {
 }
 
 function calcularTotal (valorPecas, hora) {
-    valorPecas + hora
+   return valorPecas + hora
 }
 
 function verificarGarantia (meses) {

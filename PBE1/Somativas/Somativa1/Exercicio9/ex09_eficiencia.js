@@ -6,17 +6,17 @@ function calcularEficiencia(real,prevista) {
 
 function classificarEficiencia(percentual) {
     if (percentual >= 90) {
-        console.log(`Prevista = ${prevista} | Real = ${real} | A meta foi ATINGIDA em ${percentual}% (META ATINGIDA)`);
+        return `A meta foi ATINGIDA em ${percentual}% (META ATINGIDA)`
     }else if (percentual <= 89.99 && percentual >= 70){
-        console.log(`Prevista = ${prevista} | Real = ${real} | ATENCAO, cuidado pois a meta esta somente ${percentual}% completa (ATENCAO)`);
+        return `ATENCAO, cuidado pois a meta esta somente ${percentual}% completa`
     }else{
-        console.log(`Prevista = ${prevista} | Real = ${real} | A producao esta ABAIXO da media, com somente ${percentual}% (ABAIXO DA META)`);
+        return `A producao esta ABAIXO da media, com somente ${percentual}% (ABAIXO DA META)`
     }
 }
 
-const prevista = entrada.questionInt("Qual é a meta a ser cumprida: ")
+const prevista = entrada.questionInt("Qual e a meta a ser cumprida: ")
 const real = entrada.questionInt("Quantas conseguiram cumprir: ")
 
 const percentual = calcularEficiencia (real, prevista)
 
-classificarEficiencia(percentual)
+console.log(`Prevista = ${prevista} | Real = ${real} | ${classificarEficiencia(percentual)}`);

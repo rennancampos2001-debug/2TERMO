@@ -1,7 +1,7 @@
 const produto = {
     nome: "Teclado Mecânico",
     preco: 150.00,
-    estoque:25,
+    estoque: 25,
     emOferta: true
 };
 

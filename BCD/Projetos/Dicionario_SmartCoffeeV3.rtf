@@ -1,0 +1,357 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Rela\f1\'e7\'e3o: \cf2\b0 Analisa\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e clientes
+\par possui rela\f1\'e7\'e3o de 1,1 e 1,1
+\par funcionario chave primaria - PK
+\par id_produtos
+\par cliente chave primaria - PK
+\par id_categoria
+\par \f0 
+\par \cf1\b 002 - Rela\f1\'e7\'e3o: \cf2\b0 Atende\cf1\b 
+\par \cf0\b0\f0 Entidades: Funcion\f1\'e1rio e Cliente
+\par Cardinalidade: 0,n e 0,n
+\par 
+\par Relacionamento respons\'e1vel por representar o atendimento dos funcion\'e1rios aos clientes.
+\par \f0 
+\par \cf1\b 003 - Atributo: \cf2\b0 Ativo\cf1\b 
+\par \cf0\b0 Status Ativo 
+\par \cf1\b 004 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 N\f1\'famero de CNPJ do fornecedor.
+\par \f0 
+\par \cf1\b 005 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Documento de identifica\f1\'e7\'e3o do funcion\'e1rio.
+\par \f0 
+\par \cf1\b 006 - Atributo: \cf2\b0 CPF_Clientes\cf1\b 
+\par \cf0\b0 Documento de identifica\f1\'e7\'e3o do cliente.
+\par \f0 
+\par \cf1\b 007 - Atributo: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 Fun\f1\'e7\'e3o exercida pelo funcion\'e1rio no restaurante.
+\par \f0 
+\par \cf1\b 008 - Entidade: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Categorias
+\par Relacionamenros entre produto e categoria:Analisa
+\par cardialidade de relacionamento 1,1 e 1,1
+\par \f0 
+\par \cf1\b 009 - Atributo: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 Categoria do produto.
+\par 
+\par \cf1\b 010 - Entidade: \cf2\b0 Cliente\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Clientes
+\par Relacionamentos entre cliente e programa de fidelidade: Participa
+\par cardialidade de relacionamento 1,1 e 1,1
+\par Relacionamenros entre cliente e Pedidos: realiza
+\par cardialidade de relacionamento 0,n e 0,n
+\par  \f0 
+\par \cf1\b 011 - Atributo: \cf2\b0 Codigo\cf1\b 
+\par \cf0\b0 C\f1\'f3digo utilizado para identificar a categoria.
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Credito\cf1\b 
+\par \cf0\b0 Pagamento no credito
+\par 
+\par \cf1\b 013 - Atributo: \cf2\b0 Data_Admissao\cf1\b 
+\par \cf0\b0 Data em que o funcion\f1\'e1rio foi admitido.
+\par \f0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Data_Cadastro\cf1\b 
+\par \cf0\b0 Data em que a categoria foi cadastrada.
+\par 
+\par \cf1\b 015 - Atributo: \cf2\b0 Data_Hora\cf1\b 
+\par \cf0\b0 Data e hora em que o pedido foi registrado.
+\par 
+\par \cf1\b 016 - Atributo: \cf2\b0 Data_Hora_Pagamento\cf1\b 
+\par \cf0\b0 Data e hora em que o pagamento foi realizado.
+\par 
+\par \cf1\b 017 - Atributo: \cf2\b0 Data_Hora_Saida\cf1\b 
+\par \cf0\b0 Data e hora em que a entrega saiu para o destino.
+\par 
+\par \cf1\b 018 - Atributo: \cf2\b0 Data_Ultima_Atualizacao\cf1\b 
+\par \cf0\b0 Data da \f1\'faltima atualiza\'e7\'e3o das informa\'e7\'f5es do programa.
+\par \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 Data_cadastro\cf1\b 
+\par \cf0\b0 Data em que o cliente foi cadastrado no sistema.
+\par 
+\par \cf1\b 020 - Atributo: \cf2\b0 Debito\cf1\b 
+\par \cf0\b0 Pagamento no debito
+\par 
+\par \cf1\b 021 - Entidade: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Delivery
+\par Relacionamenros entre pedidos e item_pedido: contem
+\par cardialidade de relacionamento 1,1 e 1,n
+\par \f0 
+\par \cf1\b 022 - Atributo: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 Pedido a Delivery
+\par 
+\par \cf1\b 023 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Endere\f1\'e7o de e-mail utilizado para contato com o cliente.
+\par \f0 
+\par \cf1\b 024 - Atributo: \cf2\b0 Endereco_Entrega\cf1\b 
+\par \cf0\b0 Endere\f1\'e7o onde o pedido ser\'e1 entregue.
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 Endere\f1\'e7o\cf1\b 
+\par \cf0\b0\f0 Endere\f1\'e7o do fornecedor.
+\par \f0 
+\par \cf1\b 026 - Rela\f1\'e7\'e3o: \cf2\b0 Entrega\cf1\b 
+\par \cf0\b0\f0 Entidades: Funcion\f1\'e1rio e Delivery
+\par Cardinalidade: 0,n e 0,n
+\par 
+\par Relacionamento respons\'e1vel por representar a realiza\'e7\'e3o das entregas pelos funcion\'e1rios.
+\par \f0 
+\par \cf1\b 027 - Entidade: \cf2\b0 Estoque\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Estoque
+\par Relacionamenros entre produto e estoque: possui
+\par cardialidade de relacionamento 1,1 e 1,1
+\par \f0 
+\par \cf1\b 028 - Entidade associativa: \cf2\b0 Ficha_Tecnica\cf1\b 
+\par \cf0\b0 Entidades: Produto e Estoque
+\par Cardinalidade: 1,n e 0,n
+\par 
+\par Relacionamento respons\f1\'e1vel por indicar os insumos do estoque utilizados na produ\'e7\'e3o dos produtos.
+\par  \f0 
+\par \cf1\b 029 - Atributo: \cf2\b0 Forma_Pagamento\cf1\b 
+\par \cf0\b0 Forma utilizada para realizar o pagamento.
+\par 
+\par \cf1\b 030 - Entidade: \cf2\b0 Fornecedor\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Fornecedor
+\par Relacionamenros entre produto e fornecedor: Fornecido
+\par cardialidade de relacionamento 1,1 e 1,n
+\par \f0 
+\par \cf1\b 031 - Rela\f1\'e7\'e3o: \cf2\b0 Fornecido\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e clientes
+\par possui rela\f1\'e7\'e3o de 1,n e 1,n
+\par funcionario chave primaria - PK
+\par id_produtos
+\par cliente chave primaria - PK
+\par id_fornecedor
+\par \f0 
+\par \cf1\b 032 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos funcionarios
+\par Relacionamentos entre funcionario e cliente: Atende
+\par cardialidade de relacionamento 0,n e 0,n \f0 
+\par \cf1\b 033 - Rela\f1\'e7\'e3o: \cf2\b0 Gera\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e clientes
+\par possui rela\f1\'e7\'e3o de 1,n e 1,1
+\par funcionario chave primaria - PK
+\par id_pedidos
+\par cliente chave primaria - PK
+\par id_delivery
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 Hora_pedido\cf1\b 
+\par \cf0\b0 Hor\f1\'e1rio em que o pedido foi realizado.
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 ID_Categoria\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico da categoria.
+\par \f0 
+\par \cf1\b 036 - Atributo: \cf2\b0 ID_Fornecedor\cf1\b 
+\par \cf0\b0 Pre\f1\'e7o associado \'e0 categoria.
+\par \f0 
+\par \cf1\b 037 - Atributo: \cf2\b0 ID_cliente\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do cliente.
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 ID_delivery\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico da entrega.
+\par \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 ID_finalidade\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do programa de fidelidade.
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 ID_funcionario\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do funcion\'e1rio.
+\par \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 ID_insumo\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do insumo.
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 ID_pagamento\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do pagamento.
+\par \f0 
+\par \cf1\b 043 - Atributo: \cf2\b0 ID_pedido\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do pedido.
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 ID_produto\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do produto.
+\par \f0 
+\par \cf1\b 045 - Atributo: \cf2\b0 Inativo\cf1\b 
+\par \cf0\b0 Status inativo
+\par 
+\par \cf1\b 046 - Entidade associativa: \cf2\b0 Item_Pedidos\cf1\b 
+\par \cf0\b0 Entidades: Pedidos e Produto
+\par Cardinalidade: 1,n e 0,n
+\par 
+\par Relacionamento respons\f1\'e1vel por indicar os produtos que fazem parte de cada pedido.
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Nome completo do funcion\f1\'e1rio.
+\par \f0 
+\par \cf1\b 048 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Nome do fornecedor ou empresa.
+\par 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nome_Cliente\cf1\b 
+\par \cf0\b0 Nome completo do cliente.
+\par 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nome_Entregador\cf1\b 
+\par \cf0\b0 Nome do respons\f1\'e1vel pela entrega.
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 Nome_Insumo\cf1\b 
+\par \cf0\b0 Nome do insumo armazenado no estoque.
+\par 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nome_Produto\cf1\b 
+\par \cf0\b0 Nome do produto comercializado.
+\par 
+\par \cf1\b 053 - Atributo: \cf2\b0 PIX\cf1\b 
+\par \cf0\b0 pagamento no PIX
+\par 
+\par \cf1\b 054 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Pagamentos
+\par Relacionamenros entre pedidos e pagamento: gera
+\par cardialidade de relacionamento 1,1 e 1,n
+\par \f0 
+\par \cf1\b 055 - Rela\f1\'e7\'e3o: \cf2\b0 Participa\cf1\b 
+\par \cf0\b0\f0 relacionamento entre Cliente e Programa Fidelidade
+\par possui rela\f1\'e7\'e3o de 0,n e 0,1
+\par funcionario chave primaria - PK
+\par id_cliente
+\par cliente chave primaria - PK
+\par id_programa
+\par \f0 
+\par \cf1\b 056 - Entidade: \cf2\b0 Pedidos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Pedidos
+\par Relacionamenros entre cliente e Pedidos: realiza
+\par cardialidade de relacionamento 0,n e 1,1
+\par Relacionamenros entre pedidos e pagamento: gera
+\par cardialidade de relacionamento 1,1 e 1,n
+\par Relacionamenros entre pedidos e delivery: pode gerar
+\par cardialidade de relacionamento 1,n e 1,1
+\par Relacionamenros entre pedidos e item_pedido: contem
+\par cardialidade de relacionamento 1,1 e 1,n
+\par \f0 
+\par \cf1\b 057 - Atributo: \cf2\b0 Peso\cf1\b 
+\par \cf0\b0 Peso do produto.
+\par 
+\par \cf1\b 058 - Atributo: \cf2\b0 Pontos_Fidelidade\cf1\b 
+\par \cf0\b0 Quantidade de pontos acumulados pelo cliente.
+\par 
+\par \cf1\b 059 - Rela\f1\'e7\'e3o: \cf2\b0 Possui\cf1\b 
+\par \cf0\b0\f0 relacionamento entre funcionarios e clientes
+\par possui rela\f1\'e7\'e3o de 1,1 e 1,n
+\par funcionario chave primaria - PK
+\par id_pedidos
+\par cliente chave primaria - PK
+\par id_pagamentos
+\par \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 Preco_Historico\cf1\b 
+\par \cf0\b0 Pre\f1\'e7o do produto no momento em que foi inclu\'eddo no pedido.
+\par \f0 
+\par \cf1\b 061 - Atributo: \cf2\b0 Presencial\cf1\b 
+\par \cf0\b0 Pedido Presencial
+\par 
+\par \cf1\b 062 - Atributo: \cf2\b0 Pre\f1\'e7o\cf1\b 
+\par \cf0\b0\f0 Pre\f1\'e7o associado \'e0 categoria.
+\par \f0 
+\par \cf1\b 063 - Atributo: \cf2\b0 Pre\f1\'e7o_Unitario\cf1\b 
+\par \cf0\b0\f0 Pre\f1\'e7o de uma unidade do produto.
+\par \f0 
+\par \cf1\b 064 - Entidade: \cf2\b0 Produto\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es dos Produtos
+\par Relacionamenros entre item_pedido e produto: Seleciona
+\par cardialidade de relacionamento 1,1 e 1,1
+\par Relacionamenros entre produto e categoria:Analisa
+\par cardialidade de relacionamento 1,1 e 1,1
+\par Relacionamenros entre produto e fornecedor: Fornecido
+\par cardialidade de relacionamento 1,1 e 1,n
+\par Relacionamenros entre produto e estoque: possui
+\par cardialidade de relacionamento 1,1 e 1,1 \f0 
+\par \cf1\b 065 - Atributo: \cf2\b0 Produto_Fornecido\cf1\b 
+\par \cf0\b0 Produto ou tipo de produto fornecido.
+\par 
+\par \cf1\b 066 - Entidade: \cf2\b0 Programa de fidelidade\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es do programa fidelidade
+\par Relacionamentos entre cliente e programa de fidelidade: Participa
+\par cardialidade de relacionamento 0,1 e 0,n
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Quantidade do produto inclu\f1\'edda no pedido.
+\par \f0 
+\par \cf1\b 068 - Atributo: \cf2\b0 Quantidade_Atual\cf1\b 
+\par \cf0\b0 Quantidade dispon\f1\'edvel atualmente no estoque.
+\par \f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 Quantidade_Gasta\cf1\b 
+\par \cf0\b0 Quantidade do insumo utilizada na produ\f1\'e7\'e3o do produto.
+\par \f0 
+\par \cf1\b 070 - Atributo: \cf2\b0 Quantidade_Minima\cf1\b 
+\par \cf0\b0 Quantidade m\f1\'ednima necess\'e1ria para manter o estoque.
+\par \f0 
+\par \cf1\b 071 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 relacionamento entre cliente e pedidos
+\par possui rela\f1\'e7\'e3o de 0,n e 1,1
+\par funcionario chave primaria - PK
+\par id_clientes
+\par cliente chave primaria - PK
+\par id_pedidos
+\par \f0 
+\par \cf1\b 072 - Atributo: \cf2\b0 Salario\cf1\b 
+\par \cf0\b0 Valor do sal\f1\'e1rio recebido pelo funcion\'e1rio.
+\par \f0 
+\par \cf1\b 073 - Atributo: \cf2\b0 Saldo_Pontos\cf1\b 
+\par \cf0\b0 Quantidade de pontos dispon\f1\'edveis.
+\par \f0 
+\par \cf1\b 074 - Atributo: \cf2\b0 Status\cf1\b 
+\par \cf0\b0 Situa\f1\'e7\'e3o atual do pedido.
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 Status_Entrega\cf1\b 
+\par \cf0\b0 Situa\f1\'e7\'e3o atual da entrega.
+\par \f0 
+\par \cf1\b 076 - Atributo: \cf2\b0 Status_Pagamento\cf1\b 
+\par \cf0\b0 Situa\f1\'e7\'e3o atual do pagamento.
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 Tamanho\cf1\b 
+\par \cf0\b0 Tamanho do produto.
+\par 
+\par \cf1\b 078 - Atributo: \cf2\b0 Taxa_Entrega\cf1\b 
+\par \cf0\b0 Valor cobrado pela realiza\f1\'e7\'e3o da entrega.
+\par \f0 
+\par \cf1\b 079 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 N\f1\'famero de telefone para contato com o funcion\'e1rio.
+\par \f0 
+\par \cf1\b 080 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 N\f1\'famero de telefone do fornecedor.
+\par \f0 
+\par \cf1\b 081 - Atributo: \cf2\b0 Telefone_Cliente\cf1\b 
+\par \cf0\b0 N\f1\'famero de telefone do cliente.
+\par \f0 
+\par \cf1\b 082 - Atributo: \cf2\b0 Tipo_Pedido\cf1\b 
+\par \cf0\b0 Indica o tipo de pedido realizado.
+\par 
+\par \cf1\b 083 - Atributo: \cf2\b0 Unidade_Medida\cf1\b 
+\par \cf0\b0 Unidade utilizada para medir a quantidade do insumo.
+\par 
+\par \cf1\b 084 - Atributo: \cf2\b0 Validade\cf1\b 
+\par \cf0\b0 Data de validade da categoria.
+\par 
+\par \cf1\b 085 - Atributo: \cf2\b0 Valor_Pago\cf1\b 
+\par \cf0\b0 Valor pago pelo cliente.
+\par 
+\par \cf1\b 086 - Atributo: \cf2\b0 Valor_total\cf1\b 
+\par \cf0\b0 Valor total do pedido.
+\par 
+\par \cf1\b 087 - Atributo: \cf2\b0 descri\f1\'e7\'e3o\cf1\b 
+\par \cf0\b0\f0 Descri\f1\'e7\'e3o das caracter\'edsticas da categoria.
+\par \f0 
+\par \cf1\b 088 - Atributo: \cf2\b0 kg\cf1\b 
+\par \cf0\b0 unidade de medida kilograma
+\par 
+\par \cf1\b 089 - Atributo: \cf2\b0 ml\cf1\b 
+\par \cf0\b0 unidade de medida milimetro
+\par 
+\par \cf1\b 090 - Atributo: \cf2\b0 nome_programa\cf1\b 
+\par \cf0\b0 Nome do programa de fidelidade.
+\par 
+\par \cf1\b 091 - Atributo: \cf2\b0 status\cf1\b 
+\par \cf0\b0 Indica a situa\f1\'e7\'e3o atual do programa de fidelidade
+\par \f0 
+\par \cf1\b 092 - Atributo: \cf2\b0 un\cf1\b 
+\par \cf0\b0 unidade de medida un
+\par 
+\par \cf1\b 093 - Atributo: \cf2\b0 validade_pontos\cf1\b 
+\par \cf0\b0 Data limite para utiliza\f1\'e7\'e3o dos pontos acumulados.
+\par \f0 
+\par 
+\par }
+ 

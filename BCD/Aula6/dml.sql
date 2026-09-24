@@ -117,3 +117,98 @@ INSERT INTO pagamento (id_pedido, id_forma_pagamento, valor, data_pagameto) VALU
 (3, 8, 40.00, NOW()),
 (4, 8, 3.50, NOW()),
 (5, 6, 20.50, NOW())
+
+-----------------------------------------------------------
+EXEMPLO NOVO DE INSERÇÃO DE DADOS PORÉM COM RECUPERAÇÃO DO ULTIMO IDENTIFIED
+
+INSERT INTO pedido (data_pedido, valor total, id_cliente, status_pedido) VALUES (NOW(), 'Aberto', '0.00',1);
+SET @pedido = LAST_INSERT_ID();
+SELECT @pedido;
+
+----------------------------------------------------------
+
+--ATUALIZAÇÕES E MODIFICAÇÕES DE DADOS
+UPDATE cliente
+SET telefone = '1999888802'
+WHERE id_cliente = 9
+
+--EX 2
+UPDATE produto
+SET preco = 1.00
+-- NUNCA REALIZAR UM UPDATE SEM ---- WHERE
+
+-- EX 3
+UPDATE cliente
+SET telefone = '1997777701',
+    cidade = 'Valinhos'
+WHERE id_cliente = 11;
+
+-- EX 4
+UPDATE produto
+SET preco = preco * 1.05
+WHERE id_categoria = 1
+
+-- EX 5
+UPDATE produto
+SET preco = CASE
+    WHEN preco < 20 THEN preco * 1.20
+    ELSE preco * 1.05
+END
+WHERE ativo = TRUE
+
+------------------------------------------------
+-- APAGAR DADOS DO BD
+
+DELETE FROM cliente
+WHERE id_cliente = 11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------
+-- DESAFIOS DML
+-- PARTE A
+-- 1.
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Rayssa', 'rayssa@email.com', '1190028922', 'Limeira', TRUE),
+('Calleri', 'calleri@email.com', '1998765432', 'São Paulo', TRUE)
+
+-- 2.
+INSERT INTO categoria (nome) VALUES
+('Especiais de Casa')
+
+-- 3.
+INSERT INTO produto (nome, preco, ativo, id_categoria) VALUES
+('Misto Quente', 12.5, TRUE, 13),
+('Cappuccino', 7.50, TRUE, 13),
+('Achocolatado', 6.00, TRUE, 13)
+
+-- 4.
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Neymar', 'neymar@email.com', NULL, 'Santos', TRUE)
+
+-- 5.
+INSERT INTO pedido (data_pedido, valor_total, id_cliente, status_pedido) VALUES
+(NOW(), 24.5, 19, 'FINALIZADO')
+
+SELECT * FROM produto
+
+-- 6.
+SET @pedid = LAST_INSERT_ID();
+INSERT INTO
+    item_pedido (id_pedido,id_produto,quantidade,preco_unitario,observacao)
+VALUES (6, 11, 2, 12.5, ''),
+    (5, 10, 2, 7.5, '');
+

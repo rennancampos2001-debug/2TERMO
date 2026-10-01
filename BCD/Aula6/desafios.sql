@@ -546,4 +546,54 @@ INSERT INTO
 DELETE FROM categoria
 WHERE nome = 'TESTE'
 
+-- PARTE D
+-- 17
+INSERT INTO
+    produto (
+        nome,
+        preco,
+        ativo,
+        id_categoria
+    )
+VALUES ('Donut', '11.4', TRUE, 99);
+-- Error: Cannot add or update a child row: a foreign key constraint fails (smartcoffee_dml_luis.produto, CONSTRAINT fk_produto_categoria FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria))
+
+-- 18
+INSERT INTO
+    cliente (
+        nome,
+        email,
+        telefone,
+        cidade,
+        ativo
+    )
+VALUES (
+        'joaoAlberto',
+        'LUIS@email.com',
+        '19998359309',
+        'teste',
+        TRUE
+    );
+-- Error: Duplicate entry 'Rennan@email.com' for key 'cliente.email'
+
+-- 19
+INSERT INTO
+    pedido (
+        data_pedido,
+        status,
+        valor_total,
+        id_cliente
+    )
+VALUES (
+        '2025-09-01',
+        'ABERTO',
+        14.00,
+        99
+    );
+-- Error: Cannot add or update a child row: a foreign key constraint fails (smartcoffee_dml_luis.pedido, CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente))
+
+-- 20
+-- No primeiro erro, a restrição foi por não conseguir pegar uma categoria verdadeira, então a foreign key não funcionou
+-- No segundo erro, a restrição foi por existir 2 emails iguais já cadastrados em cliente
+-- No terceiro erro, é o mesmo erro que o primeiro, mas agora com um cliente que não existe
 

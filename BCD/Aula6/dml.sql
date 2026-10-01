@@ -162,53 +162,74 @@ WHERE ativo = TRUE
 DELETE FROM cliente
 WHERE id_cliente = 11
 
+------------------------------------------------
+-- TRANSAÇÕES - SEGURANÇA PARA DML
 
+START TRANSACTION
 
+UPDATE produto
+SET preco = preco * 2.00
+WHERE id_categoria = 1
 
+SELECT id_produto, nome, preco
+FROM produto
+WHERE id_categoria = 1
 
+-- DESFAZ O QUE FIZEMOS DE ERRADO OU VOLTA UMA TRANSIÇÃO
+ROLLBACK
 
+-- VALIDA O PROCEDIMENTO DE TRANSAÇÃO
+COMMIT
 
+SELECT * FROM pedido
 
+START TRANSACTION;
+UPDATE cliente SET cidade = 'Santos' WHERE id_cliente = 19;
+COMMIT;
+ROLLBACK;
 
+-- PROCEDIMENTO DE UMA COMPRA
+--PASSO 1:
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES ('Carlos Silva', 'carlos.silva@email.com', '1999999999', 'Santos',TRUE);
+SET @cliente_compra = LAST_INSERT_ID();
 
+-- PASSO 2:
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
+(NOW(), 'ABERTO', 0.00, @cliente_compra);
+SET @pedido_compra = LAST_INSERT_ID();
 
+-- PASSO 3:
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALUES
+(@pedido_compra,4,1,13.00), (@pedido_compra,9,1,9.00);
 
+-- PASSO 4:
+UPDATE pedido
+SET valor_total = 22.00,
+    status_pedido = 'PREPARANDO'
+WHERE id_pedido = @pedido_compra;
 
+-- PASSO 5 - REGISTRAR PAGAMENTO
 
-
-
----------------------------------------------------------------------------------------
--- DESAFIOS DML
--- PARTE A
--- 1.
-INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
-('Rayssa', 'rayssa@email.com', '1190028922', 'Limeira', TRUE),
-('Calleri', 'calleri@email.com', '1998765432', 'São Paulo', TRUE)
-
--- 2.
-INSERT INTO categoria (nome) VALUES
-('Especiais de Casa')
-
--- 3.
-INSERT INTO produto (nome, preco, ativo, id_categoria) VALUES
-('Misto Quente', 12.5, TRUE, 13),
-('Cappuccino', 7.50, TRUE, 13),
-('Achocolatado', 6.00, TRUE, 13)
-
--- 4.
-INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
-('Neymar', 'neymar@email.com', NULL, 'Santos', TRUE)
-
--- 5.
-INSERT INTO pedido (data_pedido, valor_total, id_cliente, status_pedido) VALUES
-(NOW(), 24.5, 19, 'FINALIZADO')
-
-SELECT * FROM produto
-
--- 6.
-SET @pedid = LAST_INSERT_ID();
 INSERT INTO
-    item_pedido (id_pedido,id_produto,quantidade,preco_unitario,observacao)
-VALUES (6, 11, 2, 12.5, ''),
-    (5, 10, 2, 7.5, '');
+    pagamento (
+    id_pedido,id_forma_pagamento,valor,data_pagameto
+)
+VALUES (
+  @pedido_compra,2,22.00,NOW()
+);
+
+-- PASSO 6 - CONSULTA PEDIDO E RESULTADO
+SELECT p.id_pedido,
+    c.nome AS cliente,
+    p.status_pedido,
+    p.valor_total
+FROM pedido p
+JOIN cliente c ON c.id_cliente = p.id_cliente
+WHERE p.id_pedido = @pedido_compra
+
+-- PASSO 7 - RELATORIO
+SELECT nome FROM cliente WHERE nome = @cliente_compra
+
+SELECT @pedido_compra;
+
 

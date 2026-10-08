@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "serra",
+    "quantidade": 10,
+    "custoUnitario": 10
+  },
+  {
+    "nome": "prego",
+    "quantidade": 1000,
+    "custoUnitario": 0.1
+  }
+]

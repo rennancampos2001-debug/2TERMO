@@ -11,15 +11,15 @@ USE smartcoffee_dml_rennan;
 
 -- 1. Liste todos os clientes cadastrados.
 
-SELECT * FROM cliente
+SELECT * FROM cliente;
 
 -- 2. Exiba apenas nome, cidade e e-mail dos clientes.
 
-SELECT nome, cidade, email FROM cliente
+SELECT nome, cidade, email FROM cliente;
 
 -- 3. Liste os nomes das cidades sem repetir valores.
 
-SELECT DISTINCT cidade FROM cliente
+SELECT DISTINCT cidade FROM cliente;
 
 -- 4. Liste todos os produtos em ordem crescente de preço.
 
@@ -33,24 +33,27 @@ SELECT nome, preco FROM produto ORDER BY preco DESC LIMIT 5;
 
 -- 6. Liste os produtos com preço entre R$ 8,00 e R$ 15,00.
 
-SELECT nome, preco FROM produto WHERE preco BETWEEN 8.00 AND 15.00
+SELECT nome, preco FROM produto WHERE preco BETWEEN 8.00 AND 15.00;
 
 -- 7. Liste os clientes das cidades Limeira ou Americana.
 
-SELECT nome, cidade FROM cliente WHERE cidade = 'Limeira' OR 'Americana'
+SELECT nome, cidade FROM cliente WHERE cidade = 'Limeira' OR 'Americana';
+SELECT nome, cidade FROM cliente WHERE cidade IN ('Limeira' OR 'Americana');
 
 -- 8. Localize os produtos cujo nome contém a palavra “Café”.
 
-SELECT nome FROM produto WHERE nome LIKE '%Café%'
+SELECT nome FROM produto WHERE nome LIKE '%Café%';
 
 -- 9. Liste os clientes que não informaram telefone.
 
-SELECT nome, telefone FROM cliente WHERE telefone IS NULL
+SELECT nome, telefone FROM cliente WHERE telefone IS NULL;
+
+SELECT nome, COALENSCE(telefone,'Não Informado') FROM cliente AS telefone WHERE telefone IS NULL
 
 -- 10. Mostre os pedidos FINALIZADOS com valor acima de R$ 20,00,
 --     do maior para o menor valor.
 
-SELECT id_pedido, data_pedido, valor_total FROM pedido WHERE valor_total >= 20.00 ORDER BY valor_total DESC
+SELECT id_pedido, data_pedido, valor_total FROM pedido WHERE valor_total >= 20.00 ORDER BY valor_total DESC;
 
 -- PARTE C - CÁLCULOS E AGRUPAMENTOS
 
@@ -72,4 +75,4 @@ SELECT cidade, COUNT(*) AS Quantidade_clientes FROM cliente GROUP BY cidade HAVI
 
 -- 15. Calcule o faturamento total considerando apenas pedidos FINALIZADOS.
 
-SELECT SUM(valor_total) AS faturamento_total FROM pedido WHERE status_pedido = 'FINALIZADO'
+SELECT SUM(valor_total) AS faturamento_total FROM pedido WHERE status_pedido = 'FINALIZADO';

@@ -129,7 +129,46 @@ SELECT CONCAT(nome, ' - ', cidade) AS Cidade_Clientes FROM cliente;
 SELECT nome, preco, ROUND(preco * 0.90, 2) AS Preco_Desconto FROM produto;
 
 -- DATAS
-SELECT id_pedido, data_pedido, DATE(data_pedido) AS Datas, MONTH(data_pedido) AS Mês, YEAR(data_pedido) AS Ano, DAY(data_pedido) AS DIA, TIME(data_pedido) AS Horario FROM pedido
+SELECT id_pedido, data_pedido, DATE(data_pedido) AS Datas, MONTH(data_pedido) AS Mês, YEAR(data_pedido) AS Ano, DAY(data_pedido) AS DIA, TIME(data_pedido) AS Horario FROM pedido;
 
 -- COALENSCE - SUBSTITUIR A INFORMAÇÃO QUE DEIXAMOS EM NULL OU NÃO DEIXAMOS
-SELECT nome, COALESCE(telefone, 'Não informado') AS telefone FROM cliente
+SELECT nome, COALESCE(telefone, 'Não informado') AS telefone FROM cliente;
+
+-- EX 14: FUNÇÕES DE AGRUPAMENTO
+-- COUNT - CONTAR QUANTOS REGISTROS EXISTEM
+-- SUM - SOMA DE VALORES
+-- AVG - MEDIA DE VALORES
+-- MIN - MENOR VALOR
+-- MAX - MAIOR VALOR
+
+SELECT COUNT (*) AS TOTAL_CLIENTES FROM cliente;
+-- CONTAR QUANTOS CLIENTES EXISTEM
+
+SELECT AVG(preco) AS MÉDIA_PREÇOS FROM produto
+-- CALCULAR MEDIA DE PREÇO DOS PRODUTOS
+
+SELECT MIN(preco) AS MENOR_PREÇO, MAX(preco) AS MAIOR_PREÇO, AVG(preco) AS MÉDIA_PREÇO FROM produto;
+-- RESUMO DE PREÇOS
+
+SELECT SUM(valor_total) AS Faturamento_Mensal FROM pedido WHERE status_pedido = 'FINALIZADO'
+-- TOTAL DE VENDAS OU PEDIDOS REALIZADOS COM CRITÉRIO
+
+-- EX 15: GROUP BY - AGRUPAR DADOS
+SELECT cidade, COUNT(*) AS Quantidade_Clientes FROM cliente GROUP BY cidade;
+
+SELECT id_categoria, COUNT(*) AS Quantidade_Produtos FROM produto GROUP BY id_categoria;
+
+-- EX 16: HAVING - FILTRO POR GRUPOS
+-- WHERE - FILTRA LINHAS ANTES DO GROUP BY
+-- HAVING - FILTRA LINHAS DEPOIS DO GROUP BY
+SELECT cidade, COUNT(*) AS QTDE_CLIENTES FROM cliente GROUP BY cidade HAVING COUNT(*) >= 2;
+-- CIDADES COM PELO MENOS DOIS CLIENTES
+
+-- EX 17: ORDEM DE CRIAÇÃO DE UMA CONSULTA COMPLETA
+SELECT colunas
+FROM tabela
+WHERE condicao
+GROUP BY colunas_agrupar
+HAVING condicao_agrupar
+ORDER BY colunas
+LIMIT quantidade

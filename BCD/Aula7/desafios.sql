@@ -549,31 +549,17 @@ WHERE nome = 'TESTE'
 -- PARTE D
 -- 17
 INSERT INTO
-    produto (
-        nome,
-        preco,
-        ativo,
-        id_categoria
+    produto (nome,preco,ativo,id_categoria
     )
 VALUES ('Donut', '11.4', TRUE, 99);
 -- Error: Cannot add or update a child row: a foreign key constraint fails (smartcoffee_dml_luis.produto, CONSTRAINT fk_produto_categoria FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria))
 
 -- 18
 INSERT INTO
-    cliente (
-        nome,
-        email,
-        telefone,
-        cidade,
-        ativo
+    cliente (nome,email,telefone,cidade,ativo
     )
-VALUES (
-        'joaoAlberto',
-        'LUIS@email.com',
-        '19998359309',
-        'teste',
-        TRUE
-    );
+VALUES ('joaoAlberto','LUIS@email.com','19998359309','teste',TRUE
+);
 -- Error: Duplicate entry 'Rennan@email.com' for key 'cliente.email'
 
 -- 19

@@ -1,0 +1,76 @@
+/* EXERCICIO 1 */
+
+/* .grid-ex-1 {
+    display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+} */
+
+/* EXERCICIO 2 */
+
+/* .grid-ex-2 {
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+} */
+
+/* EXERCICIO 3 */
+
+/* .grid-ex-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+} */
+/* .grid-ex-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+} */
+
+/* EXERCICIO 4 */
+
+/* .grid-ex-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+} */
+
+/* EXERCICIO 5 */
+
+/* @media (max-width: 900px) {
+  .grid-gal-img {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-gal-img {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media (max-width: 300px) {
+  .grid-gal-img {
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* EXERCICIO 6 */
+
+/* .grid-ex-6 {
+  display: grid;
+  grid-template-columns: auto-fit, minmax(220px, 1fr);
+  gap: 10px;
+} */
+
+
+/* EXERCICIO 7 */
+
+/* @media (max-width: 1920px) {
+  .grid-ex-7 {
+    display: grid;
+    grid-template-columns: auto-fit, minmax(220px, 1fr);
+    gap: 24px;
+  }
+} */

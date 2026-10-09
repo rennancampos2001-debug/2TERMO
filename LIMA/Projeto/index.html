@@ -1,136 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartCoffee </title>
+    <link rel="shortcut icon" href="Imagens/Favicon.png" type="image/x-icon">
+
+    <title>SmartCoffee | Cafeteria</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-    <style>
-        body {background-color: rgb(78, 55, 39);}
-    </style>
-
-
 <body>
-    <!-- Apresentação da SmartCoffee -->
 
-    <!-- Criação do Titulo -->
-    <h1 style="color: white; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-    <center>SmartCoffee</center></h1>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="#inicio" class="marca">SmartCoffee</a>
 
-    <div style="text-align: center;">
-    <img src="Imagens/logo_smart_coffee.png" 
-    alt="SmartCoffee Logo"
-    title="SmartCoffee"
-    width="200px"
-    height="200"
-    background-positio
-    >
-</div>
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cafes">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
+    <main>
 
-    <br>
+        <!-- APRESENTAÇÃO -->
+        <section class="hero" id="inicio">
 
-    <!-- Criação do Slogan -->
-    <h2 style="color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-    <center> <i>Seu dia mais inteligente, seu café mais perfeito.</i></center></h2>
+            <div class="hero-conteudo">
+                <p class="destaque">SMARTCOFFEE</p>
 
-    <hr>
+                <h1>Café que conecta pessoas</h1>
 
-    <!-- Criação do botão com base nas pesquisas feitas -->
-    <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Cliente.html" style="text-decoration: none; color: black;"> --> Clientes <--</a></button></center>
-    </div> <br> <hr>
+                <p>
+                    Mais que café, uma experiência.
+                    Inteligência em cada gole.
+                </p>
 
-    <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Funcionarios.html" style="text-decoration: none; color: black;"> --> Funcionarios <--</a></button></center>
-    </div> <br> <hr>
-    
-    <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Produtos.html" style="text-decoration: none; color: black;"> --> Produtos <--</a></button></center>
-    </div> <br> <hr>
+                <a href="#cafes" class="botao">Ver cardápio</a>
+            </div>
 
-     <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Estoque.html" style="text-decoration: none; color: black;"> --> Estoque <--</a></button></center>
-    </div> <br> <hr>
+            <div class="imagem hero-imagem">
+                <img src="Imagens/Banner.png" alt="Banner da SmartCoffee">
+            </div>
 
-     <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Pedidos.html" style="text-decoration: none; color: black;"> --> Pedidos <--</a></button></center>
-    </div> <br> <hr>
+        </section>
 
-     <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Estoque.html" style="text-decoration: none; color: black;"> --> Estoque <--</a></button></center>
-    </div> <br> <hr>
+        <!-- SOBRE NÓS -->
+        <section class="sobre secao" id="sobre">
 
-     <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Pagamento.html" style="text-decoration: none; color: black;"> --> Pagamentos <--</a></button></center>
-    </div> <br> <hr>
+            <div class="texto">
+                <h2>Sobre nós</h2>
 
-    <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Delivery.html" style="text-decoration: none; color: black;"> --> Delivery <--</a></button></center>
-    </div> <br> <hr>
+                <p>
+                    A SmartCoffee nasceu para transformar
+                    pequenos momentos em grandes experiências.
+                    Unimos qualidade, tecnologia e paixão por café
+                    para oferecer uma experiência especial.
+                </p>
 
-    <div>
-        <center><button style="background-color: seashell;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         border: none;
-         font-size: 16px;
-         padding: 12px 24px;
-         border-radius: 6px;">
-         <a href="Programa_Fidelidade.html" style="text-decoration: none; color: black;"> --> Programa de Fidelidade <--</a></button></center>
-    </div> <br> <hr>
+                <a href="#ambiente" class="botao">Saiba mais</a>
+            </div>
+
+            <div class="imagem sobre-imagem">
+                <span>Imagem da cafeteria</span>
+            </div>
+
+        </section>
+
+        <!-- NOSSOS CAFÉS -->
+        <section class="secao" id="cafes">
+
+            <h2>Nossos cafés</h2>
+
+            <p class="subtitulo">
+                Descubra seu próximo café favorito.
+            </p>
+
+            <div class="grade-cafes">
+
+                <article class="produto">
+                    <div class="imagem produto-imagem">
+                        <span>Imagem do café</span>
+                    </div>
+
+                    <h3>Espresso</h3>
+                    <p>Intenso, encorpado e cheio de sabor.</p>
+                    <a href="#contato" class="botao">Conheça</a>
+                </article>
+
+                <article class="produto">
+                    <div class="imagem produto-imagem">
+                        <span>Imagem do café</span>
+                    </div>
+
+                    <h3>Cappuccino</h3>
+                    <p>A combinação perfeita de café e leite.</p>
+                    <a href="#contato" class="botao">Conheça</a>
+                </article>
+
+                <article class="produto">
+                    <div class="imagem produto-imagem">
+                        <span>Imagem do café</span>
+                    </div>
+
+                    <h3>Latte</h3>
+                    <p>Suavidade e cremosidade em cada gole.</p>
+                    <a href="#contato" class="botao">Conheça</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- AMBIENTE -->
+        <section class="ambiente secao" id="ambiente">
+
+            <div class="imagem ambiente-imagem">
+                <span>Imagem do ambiente</span>
+            </div>
+
+            <div class="texto">
+                <h2>Nosso ambiente</h2>
+
+                <p>
+                    Um espaço aconchegante para estudar,
+                    trabalhar, conversar ou simplesmente
+                    aproveitar um bom café.
+                </p>
+
+                <a href="#contato" class="botao">Conheça</a>
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato secao" id="contato">
+
+            <div class="contato-texto">
+                <h2>Entre em contato</h2>
+
+                <p>
+                    Tem alguma dúvida ou sugestão?
+                    Envie uma mensagem para a SmartCoffee.
+                </p>
+
+                <p>Estamos prontos para atender você!</p>
+            </div>
+
+            <form class="formulario" action="#" method="get">
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="4" required></textarea>
+
+                <button type="submit" class="botao">
+                    Enviar mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <a href="#inicio" class="marca">SmartCoffee</a>
+
+        <p>Inteligência em cada gole.</p>
+
+        <div class="redes">
+            <a href="#contato" aria-label="Instagram">Instagram</a>
+            <a href="#contato" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 SmartCoffee. Todos os direitos reservados.
+        </p>
+
+    </footer>
 
 </body>
-</html>
 
-<!-- Slogan: Smart Coffee — Inteligência em cada gole -->
+</html>

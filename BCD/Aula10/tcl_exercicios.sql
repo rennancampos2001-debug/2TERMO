@@ -69,23 +69,54 @@ ROLLBACK TO SAVEPOINT ajuste_produto3
 
 -- 12. COMMIT e explique em comentário qual alteração permaneceu.
 
+COMMIT;
+
+-- EXPLICAÇÃO DO QUE PERMANECEU:
+-- 1. A alteração no PRODUTO 2 (aumento de R$ 3,00) PERMANECEU gravada, pois foi executada ANTES do SAVEPOINT.
+-- 2. A alteração no PRODUTO 3 FOI DESFEITA quando se executou o 'ROLLBACK TO SAVEPOINT ajuste_produto3',
+--    portanto NÃO foi confirmada pelo COMMIT final.
+
 -- 13. START TRANSACTION.
+
+START TRANSACTION;
 
 -- 14. Crie pedido para cliente 1 e salve o id em @novo_pedido.
 
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES (NOW(), 'ABERTO', 20.00, 1);
+
+SET @novo_pedido = LAST_INSERT_ID();
+
 -- 15. Insira dois itens válidos.
+
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario ) VALUES (@novo_pedido, 1, 2, 7.50), (@novo_pedido, 2, 2, 8.50);
 
 -- 16. Registre pagamento válido.
 
+INSERT INTO pagamento (id_pedido, valor, id_forma_pagamento) VALUES (@novo_pedido, 50.00, 7);
+
 -- 17. Consulte pedido, itens e pagamento.
+
+SELECT * FROM pedido;
+SELECT * FROM item_pedido;
+SELECT * FROM pagamento;
 
 -- 18. COMMIT.
 
+COMMIT;
+
 -- 19. START TRANSACTION e crie pedido para cliente 2.
+
+START TRANSACTION;
+
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES (NOW(), 'ABERTO', 50.00, 2);
 
 -- 20. Salve o id em @pedido_com_erro.
 
+SET @pedido_com_erro = LAST_INSERT_ID();
+
 -- 21. Tente inserir item com id_produto inexistente.
+
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALUES (@novo_pedido, 1, 2, 7.50), (@novo_pedido, 2, 2, 8.50);
 
 -- 22. Após observar a FK, ROLLBACK.
 

@@ -5,7 +5,19 @@
   --cafe: #5a321b;
   --texto: #1e140f;
   --branco: #ffffff;
-  --fonte:"Roboto", sans-serif;
+
+  /* ESPAÇAMENTO */
+  --espaco-xs: 4px;
+  --espaco-sm: 8px;
+  --espaco-ms: 16px;
+  --espaco-lg: 32px;
+  --espaco-lg: 64px;
+  --espaco-lg: 128px;
+
+  /* FONTES */
+
+  --fonte-principal:"Roboto",sans-serif;
+  --fonte-secundaria: "Open Sans"
 
   /* :root representa o elemento raiz do documento */
 }
@@ -112,7 +124,7 @@ h3 {
   box-shadow: 0.2 ease;
 }
 
-.imagens:hover {
+.imagens img:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 38px rgba(43, 23, 13, 0.12);
 }

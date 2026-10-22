@@ -197,14 +197,24 @@ SELECT * FROM emprestimo;
 
 -- Cadastrar dois livros com o mesmo ISBN.
 
-Ele c
+-- O UNIQUE não permite que dois valores sejam colocados iguais, ou seja, se forem iguais, são os mesmos livros
 
 -- Permitir quantidade disponível negativa.
 
+-- Se permitir utilizaremos o CHECK irá verificar e travar a quantidade negativa
+
 -- Criar empréstimo para usuário inexistente.
+
+-- não pode ocorrer pois o emprestimo necesssita de uma referencia a algum usuario, e com algum espaco obrigatorio vazio nao é possivel cadastrar
 
 -- Excluir livro com histórico de empréstimos.
 
+-- Não é possivel pois está utilizando referencias a emprestimos com o CONSTRAINT
+
 -- Gravar empréstimo e falhar na redução do estoque.
 
+-- É uma transação que voce faz uma sequencia de coisas antes de ser realmente gravado, e depois de tudo ainda da para fazer um ROLLBACK
+
 -- Emprestar livro cuja quantidade disponível seja zero.
+
+-- Seria impossivel pois quando emprestamos algo com 0 disponiveis ele fia negativo, logo, não é possivel ter este emprestimo

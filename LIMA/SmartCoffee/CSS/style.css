@@ -1,106 +1,75 @@
-/* =====================================================
-   1. VARIÁVEIS (igual Aula 12)
-   :root é a raiz da página. O que eu declaro aqui pode
-   ser usado em qualquer lugar com var(--nome).
-   Vantagem: se quiser trocar uma cor, troca só aqui.
-   As cores foram tiradas do seu wireframe de alta fidelidade.
-   ===================================================== */
 :root {
-  /* Paleta de cores */
-  --cafe-escuro: #5a3e2d;   /* topo, ambiente, rodapé e botão enviar */
-  --cafe-medio: #816c64;    /* botão "Ver cardápio" */
-  --cafe-claro: #927869;    /* palavra "Coffee" do logo */
-  --rotulo: #a08573;        /* textinhos pequenos acima dos títulos */
-  --bege: #f3e6d7;          /* fundo do banner, cafés e contato */
-  --creme: #fff9f3;         /* fundo do "Sobre" e dos cards */
-  --texto: #1e140f;         /* cor do texto normal (quase preto) */
+  --cafe-escuro: #5a3e2d;
+  --cafe-medio: #816c64;
+  --cafe-claro: #927869;
+  --rotulo: #a08573;
+  --bege: #f3e6d7;
+  --creme: #fff9f3;
+  --texto: #1e140f;
   --branco: #ffffff;
 
-  /* Espaçamentos (mesma ideia da Aula 12: tamanhos fixos para reaproveitar) */
   --espaco-sm: 8px;
   --espaco-md: 16px;
   --espaco-lg: 32px;
   --espaco-xl: 64px;
 
-  /* Fonte (Poppins vem do link do Google Fonts no HTML) */
   --fonte-principal: "Poppins", sans-serif;
 }
-
-/* =====================================================
-   2. CONFIGURAÇÕES GERAIS
-   ===================================================== */
-
-/* * = todos os elementos.
-   box-sizing: border-box faz o padding e a borda ficarem DENTRO
-   da largura. Sem isso, um campo com width 100% + padding passa
-   da tela. (Aula 12) */
 * {
   box-sizing: border-box;
 }
 
-/* Rolagem suave ao clicar nos links do menu (Aula 12). */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;                              /* tira a margem branca que o navegador coloca sozinho */
-  font-family: var(--fonte-principal);    /* Poppins no site todo */
+  margin: 0;
+  font-family: var(--fonte-principal);
   color: var(--texto);
   background-color: var(--bege);
-  line-height: 1.6;                       /* espaço entre linhas, deixa o texto mais fácil de ler */
+  line-height: 1.6;
 }
 
-/* Imagens nunca passam da largura da caixa onde estão (Aula 12). */
 img {
   max-width: 100%;
-  display: block;                         /* tira um espacinho que aparece embaixo da imagem */
+  display: block;
 }
 
-/* <figure> vem com margem do navegador; zero para a imagem encostar certinho. */
 figure {
   margin: 0;
 }
 
-/* Títulos sem margem em cima e com linhas mais juntas. */
 h1, h2, h3 {
   margin-top: 0;
   line-height: 1.25;
 }
 
 h1 {
-  font-size: 2.6rem;      /* rem = relativo ao tamanho da fonte padrão (16px). 2.6rem ≈ 42px */
+  font-size: 2.6rem;
 }
 
 h2 {
-  font-size: 2rem;        /* ≈ 32px */
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1rem;        /* ≈ 16px, título pequeno do card */
+  font-size: 1rem;
   margin-bottom: 4px;
 }
 
-/* Todas as seções têm o mesmo espaço interno:
-   64px em cima/embaixo e 7% nas laterais (acompanha a largura da tela). */
 section {
   padding: var(--espaco-xl) 7%;
 }
 
-/* Textinho pequeno acima dos títulos ("Sabores que conectam", "Quem somos"...). */
 .rotulo {
   margin: 0 0 var(--espaco-sm);
   color: var(--rotulo);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 3px;         /* espaço entre as letras, como no wireframe */
+  letter-spacing: 3px;
 }
 
-/* =====================================================
-   3. BOTÕES
-   Uma classe base (.botao) e variações que só mudam a cor.
-   Assim não repito o mesmo código 4 vezes.
-   ===================================================== */
 .botao {
   display: inline-block;            /* link se comporta como caixa, aceita padding (Aula 12, .menu-id) */
   padding: 10px 22px;

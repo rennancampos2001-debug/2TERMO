@@ -21,55 +21,37 @@
     <header class="topo">
 
         <a href="#inicio" class="logo">
-            <!-- Imagem pequena do ícone. O alt descreve a imagem para quem não enxerga. -->
             <img src="img/Favicon.png" alt="Ícone da SmartCoffee">
-            <!-- "Smart" fica branco e "Coffee" fica marrom claro, como no wireframe.
-                 O <span> serve só para pintar uma parte da palavra (você usou isso na Aula 7&8). -->
             Smart<span>Coffee</span>
         </a>
 
-        <!-- <nav> = área de navegação. Os links ficam numa lista (<ul>/<li>), como na Aula 9. -->
         <nav>
             <ul class="menu">
-                <!-- Cada href="#algo" pula para o elemento que tem id="algo" na mesma página. -->
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#cafes">Produtos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <!-- O "Cardápio" tem uma classe a mais para virar botão arredondado, como no wireframe. -->
                 <li><a href="#cafes" class="menu-destaque">Cardápio</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- <main> guarda o conteúdo principal da página (tudo menos topo e rodapé). -->
     <main>
 
-        <!-- ========== 1. BANNER / INÍCIO ========== -->
-        <!-- id="inicio" é o "endereço" que os links #inicio procuram.
-             class="banner" é o nome que o CSS usa para estilizar. Mesmo nome da Aula 9. -->
         <section id="inicio" class="banner">
 
-            <!-- Lado do texto. -->
             <div class="banner-texto">
-                <!-- Textinho pequeno acima do título. Classe "rotulo" porque se repete em todas as seções. -->
                 <p class="rotulo">Sabores que conectam</p>
-                <!-- <h1> = título mais importante da página. Só deve existir UM h1. -->
-                <!-- <br> quebra a linha no mesmo lugar do wireframe. -->
                 <h1>Café que <br>conecta pessoas</h1>
                 <p>Mais que café, uma experiência.</p>
-                <!-- Link com cara de botão. Leva para os cafés. &rarr; desenha a setinha →. -->
                 <a href="#cafes" class="botao">Ver cardápio &rarr;</a>
             </div>
 
-            <!-- <figure> é a tag certa para uma imagem de conteúdo (Aulas 9, 11 e 12). -->
             <figure class="banner-imagem">
                 <img src="img/Cafe_SmartCoffee.png" alt="Xícara da SmartCoffee com grãos de café">
             </figure>
         </section>
 
-        <!-- ========== 2. SOBRE NÓS ========== -->
-        <!-- No wireframe a imagem fica à ESQUERDA, então ela vem primeiro no HTML. -->
         <section id="sobre" class="sobre">
 
             <figure class="sobre-imagem">
@@ -78,35 +60,25 @@
 
             <div class="sobre-texto">
                 <p class="rotulo">Quem somos</p>
-                <!-- <h2> = título de seção (um nível abaixo do h1). -->
                 <h2>Sobre nós</h2>
                 <p>A SmartCoffee combina café de qualidade, tecnologia e um ambiente acolhedor.</p>
-                <!-- Duas classes separadas por espaço: "botao" (estilo básico) + "botao-contorno"
-                     (muda para fundo claro com borda, como o "Saiba Mais" do wireframe). -->
                 <a href="#ambiente" class="botao botao-contorno">Saiba mais</a>
             </div>
         </section>
 
-        <!-- ========== 3. NOSSOS CAFÉS ========== -->
         <section id="cafes" class="cafes">
 
-            <!-- Cabeçalho da seção (centralizado). Aula 9 usou <header> dentro da seção do mesmo jeito. -->
             <header class="cafes-cabecalho">
                 <p class="rotulo">Nossos produtos</p>
                 <h2>Nossos cafés</h2>
             </header>
 
-            <!-- Lista de cards. É uma <ul> porque são vários itens iguais (mesma ideia da Aula 9).
-                 O CSS transforma essa lista em grade (grid) de 3 colunas. -->
             <ul class="lista-cafes">
                 <li>
-                    <!-- <article> = um bloco que faz sentido sozinho (um produto). -->
                     <article class="card-cafe">
                         <img src="img/Slogan.png" alt="Cappuccino tradicional na xícara da SmartCoffee">
-                        <!-- <h3> = título dentro da seção dos cafés. -->
                         <h3>Cappuccino Tradicional</h3>
                         <p>Equilíbrio entre sabor e cremosidade.</p>
-                        <!-- <strong> = texto importante (o preço), igual Aula 9. -->
                         <strong>R$ 14,90</strong>
                     </article>
                 </li>
@@ -129,24 +101,20 @@
             </ul>
         </section>
 
-        <!-- ========== 4. NOSSO AMBIENTE (faixa marrom escura) ========== -->
         <section id="ambiente" class="ambiente">
 
             <div class="ambiente-texto">
                 <p class="rotulo">Nosso ambiente</p>
                 <h2>Um espaço para <br>boas ideias</h2>
                 <p>Ambiente moderno, acolhedor e pensado para trabalhar, estudar ou apenas relaxar.</p>
-                <!-- "botao-claro" = botão creme, porque aqui o fundo é escuro. -->
                 <a href="#contato" class="botao botao-claro">Conheça o espaço</a>
             </div>
 
             <figure class="ambiente-imagem">
-                <!-- Nome do arquivo sem acento (fabricacao.png) para não dar erro em servidor ou no zip. -->
                 <img src="img/fabricacao.png" alt="Máquina de café e balcão da SmartCoffee">
             </figure>
         </section>
 
-        <!-- ========== 5. CONTATO ========== -->
         <section id="contato" class="contato">
 
             <div class="contato-texto">
@@ -155,31 +123,20 @@
                 <p>Tem dúvidas, sugestões ou quer fazer um evento? <br>Envie uma mensagem.</p>
             </div>
 
-            <!-- <form> agrupa os campos. É a mesma ideia dos inputs da sua Aula 7&8,
-                 só que dentro de um formulário para o botão "Enviar" ter o que enviar. -->
             <form class="formulario">
-                <!-- placeholder = texto cinza de dica dentro do campo (você usou na Aula 7&8). -->
                 <input type="text" placeholder="Nome">
-                <!-- type="email" faz o celular mostrar o teclado com @. -->
                 <input type="email" placeholder="E-mail">
-                <!-- <textarea> = campo de várias linhas, porque a mensagem é maior que um nome.
-                     rows="3" = altura de 3 linhas, como a caixa maior do wireframe. -->
                 <textarea placeholder="Mensagem" rows="3"></textarea>
-                <!-- <button> igual Aula 7&8. -->
                 <button type="submit" class="botao">Enviar mensagem</button>
             </form>
         </section>
 
     </main>
 
-    <!-- ========== RODAPÉ ========== -->
-    <!-- <footer> = rodapé (usado na sua Somativa 1). -->
     <footer class="rodape">
 
-        <!-- Mesmo logo do topo, só que sem a imagem. -->
         <a href="#inicio" class="logo">Smart<span>Coffee</span></a>
 
-        <!-- Repete o menu, como no wireframe. Reaproveita a classe "menu" do topo. -->
         <ul class="menu">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
@@ -187,9 +144,6 @@
             <li><a href="#contato">Contato</a></li>
         </ul>
 
-        <!-- Os 3 círculos brancos do wireframe são as redes sociais.
-             Coloquei a sigla dentro e o nome completo no title (aparece ao passar o mouse).
-             href="#" porque ainda não existe o endereço real das redes. -->
         <ul class="redes">
             <li><a href="#" title="Instagram">IG</a></li>
             <li><a href="#" title="WhatsApp">WA</a></li>

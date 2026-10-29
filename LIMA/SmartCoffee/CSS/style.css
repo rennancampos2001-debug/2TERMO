@@ -71,27 +71,25 @@ section {
 }
 
 .botao {
-  display: inline-block;            /* link se comporta como caixa, aceita padding (Aula 12, .menu-id) */
+  display: inline-block;
   padding: 10px 22px;
   background-color: var(--cafe-medio);
   color: var(--branco);
   border: 2px solid var(--cafe-escuro);
-  border-radius: 30px;              /* bem arredondado, formato "pílula" do wireframe */
-  font-family: inherit;             /* o <button> não herda a fonte sozinho; isso força a Poppins */
+  border-radius: 30px;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
-  text-decoration: none;            /* tira o sublinhado do link */
-  cursor: pointer;                  /* mãozinha ao passar o mouse */
-  transition: background-color 0.3s ease, transform 0.3s ease;  /* animação suave (Aula 12) */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Ao passar o mouse: escurece e sobe 2px (translateY, Aula 12). */
 .botao:hover {
   background-color: var(--cafe-escuro);
   transform: translateY(-2px);
 }
 
-/* Botão "Saiba mais": fundo claro com borda. */
 .botao-contorno {
   background-color: var(--creme);
   color: var(--texto);
@@ -102,7 +100,6 @@ section {
   color: var(--branco);
 }
 
-/* Botão "Conheça o espaço": creme, porque fica em cima do fundo escuro. */
 .botao-claro {
   background-color: var(--creme);
   color: var(--texto);
@@ -113,58 +110,50 @@ section {
   background-color: var(--bege);
 }
 
-/* Contorno quando navega pelo teclado (tecla Tab). Aula 12, :focus-visible. */
 a:focus-visible,
 .botao:focus-visible {
   outline: 3px solid var(--cafe-claro);
   outline-offset: 4px;
 }
 
-/* =====================================================
-   4. CABEÇALHO (TOPO)
-   ===================================================== */
 .topo {
-  display: flex;                    /* coloca logo e menu lado a lado (Aula 11, style2) */
-  justify-content: space-between;   /* logo na esquerda, menu na direita */
-  align-items: center;              /* centraliza na vertical */
-  flex-wrap: wrap;                  /* se não couber, o menu desce para a linha de baixo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: var(--espaco-md);
   padding: var(--espaco-md) 7%;
   background-color: var(--cafe-escuro);
 }
 
-/* Logo: imagem + texto lado a lado. */
+
 .logo {
   display: flex;
   align-items: center;
-  /* Não uso "gap" aqui: ele separaria "Smart" de "Coffee" (o flex trata cada pedaço como um item). */
   color: var(--branco);
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* Tamanho do ícone do logo. */
 .logo img {
   width: 36px;
-  margin-right: var(--espaco-sm);   /* espaço só entre o ícone e o texto */
-  border-radius: 50%;     /* 50% deixa a imagem redonda */
+  margin-right: var(--espaco-sm);
+  border-radius: 50%;
 }
 
-/* Só a palavra "Coffee" (o <span>) fica marrom claro. */
 .logo span {
   color: var(--cafe-claro);
 }
 
-/* Menu em linha, sem bolinhas da lista (Aula 12, .menu). */
 .menu {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--espaco-lg);
-  list-style: none;       /* tira as bolinhas do <ul> */
+  list-style: none;
   margin: 0;
-  padding: 0;             /* o <ul> vem com padding na esquerda; zero para alinhar */
+  padding: 0;            
 }
 
 .menu a {

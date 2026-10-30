@@ -1,0 +1,322 @@
+:root {
+  --fundo: #090A16;
+  --fundo-2: #101225;
+  --painel: #171A31;
+
+  --texto: #FFF7E6;
+  --texto-suave: #C7CADB;
+
+  --magenta: #FF3D81;
+  --ciano: #18D9FF;
+  --amarelo: #FFD84D;
+  --roxo: #6D4AFF;
+  --laranja: #FF7A33;
+
+  --borda:
+    rgba(255, 255, 255, 0.12);
+
+  --sombra:
+    0 28px 70px rgba(0, 0, 0, 0.34);
+
+  --raio:
+    20px;
+
+    --fonte: "Arial"
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--texto);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: absolute;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+span {
+  color: var(--magenta)
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.topo {
+  min-height: auto;
+  padding: 20px ;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+
+  background-color: var(--fundo);
+
+  font-family: var(--fonte)
+}
+
+.logo {
+  margin: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.menu a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--ciano);
+}
+
+.botao-sobre {
+  padding: 10px 30px;
+  border: 1px solid var(--magenta);
+  border-radius: 100px;
+  color: var(--texto-suave);
+  transition: background-color 0.5s ease;
+}
+
+.botao-sobre:hover {
+  background-color: var(--roxo);
+}
+
+.etiqueta {
+  margin-bottom: 10px;
+  color: var(--ciano);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.descricao {
+  max-width: 480px;
+  color: var(--texto-suave);
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 30px;
+
+  background-color: var(--magenta);
+  border-radius: 100px;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.botao:hover {
+  box-shadow: 0 10px 30px rgba(255, 61, 129, 0.4)
+}
+
+.hero {
+  padding: 80px 10%;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+
+  background: linear-gradient(160deg, var(--fundo), #1B1238);
+}
+
+.hero-texto h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.hero-texto .descricao {
+  margin-bottom: 30px;
+}
+
+.img-inicio {
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+
+  background-color: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.sesao {
+  padding: 80px 10%;
+}
+
+.sesao header {
+margin-bottom: 40px;
+}
+
+.sesao h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.classicos {
+  background-color: var(--fundo-2);
+}
+
+.herois {
+background-color: var(--fundo);
+}
+
+.atuais {
+background-color: var(--fundo-2);
+}
+
+.centralizado {
+  text-align: center;
+}
+
+.centralizado .descricao {
+  margin: 0 auto;
+}
+
+.grade {
+  display: grid;
+  gap: 30px;
+}
+
+.grade-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grade-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  height: 100%;
+  padding: 10px 10px 30px;
+
+  background-color: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+
+  transition: transform 0.3s ease;
+}
+
+.card-imagem {
+  aspect-ratio: 16/7;
+  margin-bottom: 20px;
+  border-radius: 12px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.grade-3 .card-imagem {
+  aspect-ratio: 10/5;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-ano, .card h3 {
+  padding: 0 15px;
+}
+
+.card-ano {
+  color: var(--amarelo);
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card h3 {
+font-size: 1rem;
+}
+
+.fundo-roxo {
+  background-color: var(--roxo);
+}
+
+.fundo-rosa {
+  background-color: var(--magenta)
+}
+
+.fundo-azul {
+  background-color: var(--ciano);
+}
+
+.fundo-amarelo {
+  background-color: var(--amarelo);
+}
+
+.lista-atuais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.invertida .banner {
+  order: 2;
+}
+
+.banner {
+  min-height: 100px;
+  padding: 20px;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.banner figcaption {
+  color: var(--fundo);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.numero {
+  display: block;
+  color: var(--magenta);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.linha .etiqueta {
+  margin: 5px 0 0;
+  font-size: 0.65rem;
+}

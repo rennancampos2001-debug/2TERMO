@@ -187,6 +187,7 @@ COMMIT;
 
 SELECT * FROM emprestimo;
 
+
 -- 25:
 
 -- Para cada situação abaixo, identifique o mecanismo mais adequado entre constraint, integridade referencial, transação ou regra da aplicação, e justifique tecnicamente sua escolha.

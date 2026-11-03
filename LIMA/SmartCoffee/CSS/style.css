@@ -166,63 +166,48 @@ a:focus-visible,
 .menu a:hover {
   color: var(--bege);
 }
-
-/* Link "Cardápio" com fundo arredondado. */
 .menu-destaque {
   padding: 6px 14px;
   background-color: var(--cafe-medio);
   border-radius: 30px;
 }
 
-/* =====================================================
-   5. BANNER (INÍCIO)
-   grid com 2 colunas iguais: texto | imagem (Aula 11).
-   ===================================================== */
 .banner {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* 1fr = 1 fração do espaço. 1fr 1fr = metade/metade */
+  grid-template-columns: 1fr 1fr;  
   align-items: center;
   gap: var(--espaco-lg);
   background-color: var(--bege);
-  border-bottom: 1px solid var(--cafe-escuro);   /* linha fina entre as seções, como no wireframe */
+  border-bottom: 1px solid var(--cafe-escuro);  
 }
 
 .banner-texto p {
   margin-bottom: var(--espaco-lg);
 }
 
-/* As 3 imagens grandes (banner, sobre, ambiente) têm o mesmo estilo,
-   então agrupo os seletores com vírgula para não repetir. */
 .banner-imagem img,
 .sobre-imagem img,
 .ambiente-imagem img {
   width: 100%;
-  aspect-ratio: 3 / 2;    /* proporção fixa: largura 3, altura 2 (Aula 12 usou 16/9) */
-  object-fit: cover;      /* preenche a caixa sem esticar a foto; corta o que sobra (Aula 12) */
+  aspect-ratio: 3 / 2;   
+  object-fit: cover;     
   border-radius: 16px;
 }
 
-/* =====================================================
-   6. SOBRE NÓS
-   Mesma grid, mas a imagem é um pouco menor que o texto.
-   ===================================================== */
 .sobre {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;   /* imagem 1 parte, texto 1,4 partes */
+  grid-template-columns: 1fr 1.4fr;  
   align-items: center;
   gap: var(--espaco-xl);
   background-color: var(--creme);
   border-bottom: 1px solid var(--cafe-escuro);
 }
 
-.sobre-texto p:not(.rotulo) {   /* :not(.rotulo) = todos os <p> menos o rótulo */
-  max-width: 420px;             /* limita a largura para a frase quebrar como no wireframe */
+.sobre-texto p:not(.rotulo) {  
+  max-width: 420px;             
   margin-bottom: var(--espaco-lg);
 }
 
-/* =====================================================
-   7. NOSSOS CAFÉS (CARDS)
-   ===================================================== */
 .cafes {
   border-bottom: 1px solid var(--cafe-escuro);
 }

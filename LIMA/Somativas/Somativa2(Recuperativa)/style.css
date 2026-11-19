@@ -1,0 +1,145 @@
+:root {
+    --fundo: #e4e4e4;
+    --fundo2: #1e2894;
+    --fundo3: #0059ff;
+
+    --preto: #000000;
+    --branco: #FFF7E6;
+
+    --fonte: "Arial", sans-serif;
+    --fonte2: "Roboto", sans-serif;
+}   
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--branco);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fundo);
+  font-family: var(--fonte2);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,h2,h3 {
+  line-height: 1.25;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.topo {
+    min-height: auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    background-color: var(--fundo2);
+    font-family: var(--fonte2);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.logo {
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.menu a:hover {
+    color: var(--fundo3);
+}
+
+.entrada {
+    padding: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    margin: 10px;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, var(--fundo3), var(--fundo2));
+}
+
+.entrada-texto h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--branco);
+    align-items: center;
+}
+
+.entrada-texto .descricao {
+    margin-bottom: 30px;
+}
+
+.descricao {
+  max-width: 480px;
+  color: var(--branco);
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 30px;
+
+    background-color: var(--branco);
+    color: var(--fundo2);
+    border-radius: 100px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+  transform: translateY(-3px);
+  background-color: var(--fundo3);
+}
+
+
+.img-entrada {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+
+    background-color: var(--preto);
+    border: 2px solid var(--fundo3);
+    border-radius: 20px;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+}
